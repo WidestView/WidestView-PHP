@@ -57,11 +57,17 @@
         <div id="home">
             
             <div class="fixed-bg" style="height:55vw;">
-                <video autoplay loop muted playsinline src="imagens/bgvideo.mp4" style="width:100%;"></video>
-                <div class="bg-white" style="position:absolute; top:30%; height:17vw; width:40%; opacity: 0.9;"> 
+                <video autoplay loop muted playsinline style="width:100%;"></video>
+                <div style="position:absolute; top:30%; height:17vw; width:40%; background-color: rgba(255, 255, 255, 0.6);"> 
                     <h1 class="ml-5" style="font-size:3.5vw; margin-top:4vw;"> Provavelmente o <br> slogan. </h1>
                 </div>
             </div>
+
+            <script>
+                let nomes = ['imagens/bgvideos/bgvideo.mp4', 'imagens/bgvideos/bgvideo2.mp4']    
+                let imagem = nomes[Math.floor((Math.random()*nomes.length))];
+                document.querySelector('video').src=imagem;
+            </script>
 
         </div>
   
@@ -70,7 +76,7 @@
         <div id="empresa">
 
             <div class="align-items-center h-100" style="padding-bottom:6vw;">
-                <h2 class="text-center titulo-dourado"> Empresa </h2>
+                <h2 class="text-center titulo-preto"> Empresa </h2>
                 <div class="container text-justify">
                     <div class="row">
                         <div class="col-6 p-5">
@@ -133,7 +139,7 @@
 
         <div id="portfolio" style="padding-bottom:6vw;">
 
-            <h2 class="text-center titulo-dourado"> Portfólio </h2>
+            <h2 class="text-center titulo-preto"> Portfólio </h2>
             <p class="text-center"> Esses são alguns de nossos trabalhos</p>
 
         </div>
@@ -164,6 +170,11 @@
                 }
                 .bg-dourado{
                     background-color:#DAA520;
+                }
+                .titulo-preto{
+                    padding-top:6vw;
+                    padding-bottom:5vw;
+                    color:black;
                 }
                 .titulo-dourado{
                     padding-top:6vw;
