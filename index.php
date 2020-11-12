@@ -7,7 +7,6 @@
         <link rel="icon" href="imagens/icone_logo_WV.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head> 
     <body>
         <?php
@@ -15,6 +14,8 @@
         include 'nav-logado1.php';
         
         ?>
+
+        <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
         <div id="home">
             
@@ -78,13 +79,12 @@
                     <h2 class="text-center titulo-branco"> Contato </h2>
                     <div class="container pt-5 pb-5">
                         <div class="row">
-                            <iframe id="map" class="ml-auto mr-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6779116408266!2d-46.64198608502199!3d-23.5800086846736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce598519906873%3A0xfe68a431eec90314!2sRua%20Vergueiro%2C%202016%20-%20Vila%20Mariana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004102-000!5e0!3m2!1spt-BR!2sbr!4v1605143265184!5m2!1spt-BR!2sbr" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                             
                         </div>
                         <div class="row">
-                            <div class="social-menu ml-auto mr-auto" style="margin-top:5vw;">
+                            <div class="social-menu ml-auto mr-auto">
                                 <ul>
-                                    <li class="space-social"><a href=""><i class="fa fa-facebook"></i></a></li>
+                                    <li class="space-social"><a href="https://google.com.br"><i class="fa fa-facebook"></i></a></li>
                                     <li class="space-social"><a href=""><i class="fa fa-instagram"></i></a></li>
                                     <li class="space-social"><a href=""><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
@@ -104,8 +104,13 @@
             <p class="text-center"> Esses são alguns de nossos trabalhos</p>
 
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript" src="main.js"></script>
+
+        <script src="https://kit.fontawesome.com/87aae4010f.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     </body>
 </html>

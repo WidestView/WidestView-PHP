@@ -1,45 +1,55 @@
 ::selection {
-    background:#DAA520;
-    color:black;                    
+    background: #DAA520;
+    color: black;                    
     }
 html{
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
+
 @media (min-width: 768px) {
     .h-md-100 { height: 100vh; }
 }
+
 p.tiny {
-    line-height:0.7;
+    line-height: 0.7;
 }
+
 p.big {
-    line-height:2;
+    line-height: 2;
 }
+
 .bg-tema{
-    background-color:#222222;
-    color:white;
+    background-color: #222222;
+    color: white;
 }
+
 .bg-preto{
     background-color:#000;
-    color:white;
+    color: white;
 }
+
 .bg-tema:hover{
-    color:#DAA520;
+    color :#DAA520;
 }
+
 .titulo-preto{
-    padding-top:6vw;
-    padding-bottom:5vw;
-    color:black;
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    color: black;
 }
+
 .titulo-dourado{
-    padding-top:6vw;
-    padding-bottom:5vw;
-    color:#DAA520;
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    color: #DAA520;
 }
+
 .titulo-branco{
-    padding-top:6vw;
-    padding-bottom:5vw;
-    color:white;
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    color: white;
 }
+
 .fixed-bg{
     background-attachment: fixed;
     background-position: center;
@@ -47,28 +57,34 @@ p.big {
     background-size: cover;
     position: relative;
 }
+
 .bg-imagem{
     background-image:url('imagens/bg-contato.jpg');
 }
+
 .social-menu ul {
     position: relative;
     padding: 0;
     margin: 0;
     display: flex;
 }
+
 .social-menu ul li {
     list-style: none;
     margin: 0 10px;
 }
+
 .social-menu ul li .fa {
     color: #000000;
     font-size: 25px;
     line-height: 50px;
     transition: .5s;
 }
+
 .social-menu ul li .fa:hover {
     color: #ffffff;
 }
+
 .social-menu ul li a {
     position: relative;
     display: block;
@@ -81,22 +97,100 @@ p.big {
     transform: translate(0,0px);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
+
 .social-menu ul li a:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
+
 .social-menu ul li:nth-child(1) a:hover {
     background-color: #3b5999;
 }
+
 .social-menu ul li:nth-child(2) a:hover {
     background-color: #e4405f;
 }
+
 .social-menu ul li:nth-child(3) a:hover {
     background-color: #0077B5;
 }
+
 .space-social{
-    padding-left:1.5vw;
-    padding-right:1.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
 }
+
 #map{
-    margin-top:-4vw;
+    margin-top: -4vw;
+}
+
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+    outline: none;
+    z-index:9999;
+    border: none;
+    border-radius:50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+  #back-to-top-btn:hover, #back-to-top-btn:focus {
+    background-color: #222;
+    color: #fff;  
+}
+  
+  @media(max-width: 992px) {
+    .container { padding: 20px 100px; }
+    #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
+}
+
+  @media(max-width:768px) {
+    body { font-size: 16px; }
+    .container { padding: 10px 50px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+    hr { margin: 30px 0; }
+    #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
+}
+  
+  .btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+  @keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+  
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;  
+    animation-name: btnExit;
+}
+
+  @keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
 }
