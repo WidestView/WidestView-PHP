@@ -1,0 +1,102 @@
+::selection {
+    background:#DAA520;
+    color:black;                    
+    }
+html{
+    scroll-behavior:smooth;
+}
+@media (min-width: 768px) {
+    .h-md-100 { height: 100vh; }
+}
+p.tiny {
+    line-height:0.7;
+}
+p.big {
+    line-height:2;
+}
+.bg-tema{
+    background-color:#222222;
+    color:white;
+}
+.bg-preto{
+    background-color:#000;
+    color:white;
+}
+.bg-tema:hover{
+    color:#DAA520;
+}
+.titulo-preto{
+    padding-top:6vw;
+    padding-bottom:5vw;
+    color:black;
+}
+.titulo-dourado{
+    padding-top:6vw;
+    padding-bottom:5vw;
+    color:#DAA520;
+}
+.titulo-branco{
+    padding-top:6vw;
+    padding-bottom:5vw;
+    color:white;
+}
+.fixed-bg{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg-imagem{
+    background-image:url('imagens/bg-contato.jpg');
+}
+.social-menu ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #0077B5;
+}
+.space-social{
+    padding-left:1.5vw;
+    padding-right:1.5vw;
+}
+#map{
+    margin-top:-4vw;
+}
