@@ -1,7 +1,23 @@
 ::selection {
     background: #DAA520;
     color: black;                    
-    }
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: gray;
+}
+
+::-webkit-scrollbar
+{
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #000;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -60,6 +76,10 @@ p.big {
 
 .bg-imagem{
     background-image:url('imagens/bg-contato.jpg');
+}
+
+.bg-imagem2{
+    background-image:url('imagens/bg-rodape.png');
 }
 
 .social-menu ul {

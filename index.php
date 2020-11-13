@@ -75,7 +75,7 @@
         <div id="contato">
 
             <div class="fixed-bg bg-imagem">
-                <div class="align-items-center h-100 bg-tema" style="padding-bottom:6vw; color: #E5E0E0; opacity:0.8">
+                <div class="h-100 bg-tema" style="padding-bottom:6vw; color: #E5E0E0; opacity:0.8">
                     <h2 class="text-center titulo-branco"> Contato </h2>
                     <div class="container pt-5 pb-5">
                         <div class="row">
@@ -84,9 +84,9 @@
                         <div class="row">
                             <div class="social-menu ml-auto mr-auto">
                                 <ul>
-                                    <li class="space-social"><a href="https://google.com.br"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="space-social"><a href=""><i class="fa fa-instagram"></i></a></li>
-                                    <li class="space-social"><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="space-social"><a href="https://www.facebook.com/widest.view.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="space-social"><a href="https://www.instagram.com/widest_view/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    <li class="space-social"><a href="https://www.linkedin.com/in/widest-view-800ab41ba/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -98,12 +98,18 @@
 
         <hr class="my-auto">
 
-        <div id="portfolio" style="padding-bottom:6vw;">
+        <div id="portfolio" style="padding-bottom:50vw;">
 
             <h2 class="text-center titulo-preto"> Portfólio </h2>
             <p class="text-center"> Esses são alguns de nossos trabalhos</p>
 
         </div>
+       
+        <?php
+
+        include 'rodape.php'
+
+        ?>
         
         <script type="text/javascript" src="main.js"></script>
 
