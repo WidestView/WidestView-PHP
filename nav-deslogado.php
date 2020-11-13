@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-preto">
+<nav class="navbar navbar-expand-lg navbar-dark bg-tema">
     <a class="navbar-brand mx-5 my-n1" href="#">
         <img src="imagens/logo_WV.svg" width="55" height="55" alt="" loading="lazy">
     </a>
@@ -14,10 +14,10 @@
                 <a class="nav-link" href="#empresa">Empresa</a>
             </li>
             <li class="nav-item nav-item ml-4">
-                <a class="nav-link" href="#contato">Contato</a>
+                <a class="nav-link" href="#portfolio">Portfólio</a>
             </li>
             <li class="nav-item nav-item ml-4">
-                <a class="nav-link" href="#portfolio">Portfólio</a>
+                <a class="nav-link" href="#contato">Contato</a>
             </li>
         </ul>
         <div class="dropdown ml-auto mx-4">

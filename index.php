@@ -39,30 +39,30 @@
         <div id="empresa">
 
             <div class="align-items-center h-100" style="padding-bottom:6vw;">
-                <h2 class="text-center titulo-preto"> Empresa </h2>
-                <div class="container text-justify">
+                <h2 class="text-center titulo-preto heading"> Empresa </h2>
+                <div class="container text-justify" style="margin-top:5vw;">
                     <div class="row">
-                        <div class="col-6 p-5">
-                            <h3 class="py-1">oieee</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Eu sem integer vitae justo eget magna fermentum iaculis eu. 
+                        <div class="col-4 py-5 px-4">
+                            <h3 class="py-2"> Quem somos </h3>
+                            <p> <i> A Widest View é um grupo de jovens empreendedores originada ainda em 2020, com o objetivo de prestar serviços na área
+                            de desenvolvimento de sistemas no geral. </i> </p>
                         </div>
-                        <div class="col-6 p-5">
-                            <h3 class="py-1">oieee</h3>
-                            Ligula ullamcorper malesuada proin libero nunc consequat. Tellus orci ac auctor augue mauris augue neque gravida in. 
-                            Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. 
+                        <div class="col-4 py-5 px-4">
+                            <h3 class="py-2">O que fazemos</h3>
+                            <p> <i>Trabalhamos com <a href="" style="color:black"> <u> Design Digital </u> </a>, <a href="" style="color:black"> <u> Análise de Sistemas </u> </a>,
+                            <a href="" style="color:black"><u>Análise e Desenvolvimento de Banco de Dados</u></a>, Programação <a href="" style="color:black"><u>Front</u></a>
+                            e <a href="" style="color:black"> <u> BackEnd </u> </a> e <a href="" style="color:black"> <u> Análise de Infraestrutura </u> </a> </i> <p>
+                        </div>
+                        <div class="col-4 py-5 px-4">
+                            <h3 class="py-2"> Nossos Objetivos </h3>
+                            <p> <i> Alvejamos crescer no mercado da programação e prestação de serviços para os mais diferentes tipos de clientes, e sua 
+                            satisfação é temos como objetivo principal </i> <p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 p-5">
-                            <h3 class="py-1">oieee</h3>
-                            Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Dolor purus non enim praesent. Turpis cursus in hac habitasse platea. 
-                            eget dolor. Sit amet consectetur adipiscing elit. 
-                        </div>
-                        <div class="col-6 p-5">
-                            <h3 class="py-1">oieee</h3>
-                            Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. 
-                            Consequat nisl vel pretium lectus quam id.
+                        <div class="col-12 p-5">
+                            <h4 class="text-center py-4"> A equipe </h4>
+                            <p class="text-center"> Conheça os membros que fizeram da Widest View realidade </p>
                         </div>
                     </div>
                 </div>
@@ -72,16 +72,46 @@
 
         <hr class="my-auto">
 
+        <div id="portfolio">
+
+            <div class="align-items-center h-100" style="padding-bottom:6vw;">
+                <h2 class="text-center titulo-preto heading"> Portfólio </h2>
+                <p class="text-center" style="margin-top:5rem;"> Esses são alguns de nossos trabalhos </p>
+            </div>
+
+        </div>
+
+        <hr class="my-auto">
+
         <div id="contato">
 
             <div class="fixed-bg bg-imagem">
-                <div class="h-100 bg-tema" style="padding-bottom:6vw; color: #E5E0E0; opacity:0.8">
-                    <h2 class="text-center titulo-branco"> Contato </h2>
-                    <div class="container pt-5 pb-5">
+                <div class="h-100 bg-tema" style="padding-bottom: 6vw; color: #E5E0E0; opacity:0.8">
+                    <h2 class="text-center titulo-branco heading"> Contato </h2>
+                    <div class="container pt-5 pb-1" style="margin-top:5vw;">
                         <div class="row">
-                            
+                            <div class="col-4 px-4">
+                                <i class="fas fa-envelope-open-text" style="font-size: 40px; margin-bottom: 2vw;"> </i>
+                                <h3> E-mail </h3>
+                                <p> Alguma dúvida? Crítica? Sugestão? Proposta de serviço? Encaminhe para nós! </p>  
+                            </div>
+                            <div class="col-4 px-4">
+                                <i class="fas fa-phone" style="font-size: 40px; margin-bottom: 2vw;"> </i>
+                                <h3> Telefone </h3>
+                                <p> Deseja estabelecer um contato direto e mais pessoal com nós? Não hesite em ligar! </p>
+                            </div>
+                            <div class="col-4 px-4">
+                                <i class="fas fa-map-marker-alt" style="font-size: 40px; margin-bottom: 2vw;"> </i>
+                                <h3> Endereço </h3>
+                                <p> Caso queira fazer uma visita à nossa sede e ver pessoalmente nosso trabalho. </p>
+                            </div>
                         </div>
-                        <div class="row">
+                        <div class="row text-center" style="padding-top:5vw;">
+                            <div class="col text-center">
+                                <h4> Nossas redes sociais: </h4>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
                             <div class="social-menu ml-auto mr-auto">
                                 <ul>
                                     <li class="space-social"><a href="https://www.facebook.com/widest.view.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -95,21 +125,6 @@
             </div>
 
         </div>
-
-        <hr class="my-auto">
-
-        <div id="portfolio" style="padding-bottom:50vw;">
-
-            <h2 class="text-center titulo-preto"> Portfólio </h2>
-            <p class="text-center"> Esses são alguns de nossos trabalhos</p>
-
-        </div>
-       
-        <?php
-
-        include 'rodape.php'
-
-        ?>
         
         <script type="text/javascript" src="main.js"></script>
 

@@ -15,7 +15,7 @@
 
 ::-webkit-scrollbar-thumb
 {
-    background-color: #000;
+    background-color: #222;
 }
 
 html{
@@ -50,20 +50,31 @@ p.big {
 
 .titulo-preto{
     padding-top: 6vw;
-    padding-bottom: 5vw;
     color: black;
-}
-
-.titulo-dourado{
-    padding-top: 6vw;
-    padding-bottom: 5vw;
-    color: #DAA520;
 }
 
 .titulo-branco{
     padding-top: 6vw;
-    padding-bottom: 5vw;
     color: white;
+}
+
+.heading{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    font-size: 1.9rem;
+}
+
+.heading::after{
+    content: "";
+    width: 10rem;
+    height: .2rem;
+    background-color: #DAA520;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
 }
 
 .fixed-bg{
