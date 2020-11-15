@@ -1,6 +1,6 @@
 ::selection {
-    background: #DAA520;
-    color: black;                    
+    background:#464362;
+    color: white;                    
 }
 
 ::-webkit-scrollbar-track
@@ -24,7 +24,7 @@ html{
 
 @media (min-width: 768px) {
     .h-md-100 { height: 100vh; }
-}
+} 
 
 p.tiny {
     line-height: 0.7;
@@ -45,16 +45,16 @@ p.big {
 }
 
 .bg-tema:hover{
-    color :#DAA520;
+    color :#464362;
 }
 
 .titulo-preto{
-    padding-top: 6vw;
+    padding-top: 5rem;
     color: black;
 }
 
 .titulo-branco{
-    padding-top: 6vw;
+    padding-top: 5rem;
     color: white;
 }
 
@@ -69,7 +69,7 @@ p.big {
     content: "";
     width: 10rem;
     height: .2rem;
-    background-color: #DAA520;
+    background-color: #464362;
     position: absolute;
     bottom: -2rem;
     left: 50%;
@@ -175,7 +175,7 @@ p.big {
 }
 
   #back-to-top-btn:hover, #back-to-top-btn:focus {
-    background-color: #222;
+    background-color: #464362;
     color: #fff;  
 }
   
