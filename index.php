@@ -25,34 +25,17 @@
         <div id="home">
             
             <div class="position-relative" id="video-bg" style="height:55vw;">
-            <style>
-                @media(max-width:992px){
-                    #video-bg{
-                        height:100vw!important;
-                    }
-                    #top-video{
-                        height:100%;
-                        object-fit: cover;
-                    }
-                }
-                @media(max-width:768px){
-                    #video-bg{
-                        height:200vw!important;
-                    }
-                    #top-video{
-                        height:100%;
-                        object-fit: cover;
-                    }
-                }
-            </style>
                 <video id="top-video" autoplay loop muted playsinline style="width:100%; pointer-events: none;"></video>
                 <div id="slogan-bg" style="position:absolute; top:30%; height:15vw; width:40%; background-color: rgba(255, 255, 255, 0.6);"> 
+
                 <style>
+
                     @media(max-width:992px){
                         #video-bg{
                             display: flex;
                             justify-content: center;
                             width:100%;
+                            height:100vw!important;
                         }
                         #slogan-bg{
                             background-color: transparent!important;
@@ -65,49 +48,26 @@
                             margin:0 auto!important;
                             font-size:10vw!important;
                         }
+                        #top-video{
+                        height:100%;
+                        object-fit: cover;
+                        }
                     }
+                    @media(max-width:768px){
+                        #video-bg{
+                            height:200vw!important;
+                        }
+                        #top-video{
+                            height:100%;
+                            object-fit: cover;
+                        }
+                    }
+
                 </style>
+
                     <h1 id="slogan" class="ml-3 ml-md-5 ml-lg-5" style="font-size:3.5vw; margin-top:3.1vw;"> Provavelmente o <br> slogan. </h1>
                 </div>
             </div>
-
-            <script>
-                
-                const videos = [
-                    'imagens/bgvideos/bgvideo1.mp4',
-                    'imagens/bgvideos/bgvideo2.mp4',
-                    'imagens/bgvideos/bgvideo3.mp4',
-                    'imagens/bgvideos/bgvideo4.mp4'
-                ]
-                
-                function getNewVideo(){
-                    let lastVideo = localStorage.getItem('lastVideo');
-                    let video = '';
-                    if(lastVideo === null){
-                        video = videos[Math.floor(Math.random() * videos.length)];    
-                    }else{
-                        const index = videos.indexOf(lastVideo);
-                        if (index > -1) {
-                            let availableVideos = videos;
-                            availableVideos.splice(index,1);
-                            video = availableVideos[Math.floor(Math.random() * availableVideos.length)];    
-                        }else{
-                            console.log('Error on localstorage: ' + lastVideo);
-                            video = videos[Math.floor(Math.random() * videos.length)];    
-                        }
-                    }
-                    setVideo(video);
-                }
-                
-                function setVideo(video){
-                    document.getElementById('top-video').src = video; 
-                    localStorage.setItem('lastVideo',video);
-                    console.log(video);
-                }
-                
-                getNewVideo();
-            </script>
-
         </div>
   
         <hr class="my-auto"/>
@@ -186,6 +146,7 @@
                                 <h5 style="color:#8986AC"> Rua Luiz Scott, 209 </h5>
                             </div>
                         </div>
+
                         <style>
                             @media(max-width:992px){
                                 .item-contato{
@@ -193,6 +154,7 @@
                                 }
                             }
                         </style>
+
                         <div class="row text-center" style="padding-top:4rem;">
                             <div class="col text-center">
                                 <h4> Nossas redes sociais: </h4>
@@ -211,6 +173,43 @@
                 </div>
             </div>
         </div>
+
+        <script>
+                
+                const videos = [
+                    'imagens/bgvideos/bgvideo1.mp4',
+                    'imagens/bgvideos/bgvideo2.mp4',
+                    'imagens/bgvideos/bgvideo3.mp4',
+                    'imagens/bgvideos/bgvideo4.mp4'
+                ]
+                
+                function getNewVideo(){
+                    let lastVideo = localStorage.getItem('lastVideo');
+                    let video = '';
+                    if(lastVideo === null){
+                        video = videos[Math.floor(Math.random() * videos.length)];    
+                    }else{
+                        const index = videos.indexOf(lastVideo);
+                        if (index > -1) {
+                            let availableVideos = videos;
+                            availableVideos.splice(index,1);
+                            video = availableVideos[Math.floor(Math.random() * availableVideos.length)];    
+                        }else{
+                            console.log('Error on localstorage: ' + lastVideo);
+                            video = videos[Math.floor(Math.random() * videos.length)];    
+                        }
+                    }
+                    setVideo(video);
+                }
+                
+                function setVideo(video){
+                    document.getElementById('top-video').src = video; 
+                    localStorage.setItem('lastVideo',video);
+                    console.log(video);
+                }
+                
+                getNewVideo();
+            </script>
         
         <script type="text/javascript" src="main.js"></script>
 

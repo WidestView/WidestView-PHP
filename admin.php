@@ -128,84 +128,100 @@
 
         </style>
 
-        <div class="position-relative" id="video-bg" style="height:100%;">
-            <video id="top-video" autoplay loop muted playsinline style="width:100%; pointer-events: none; object-fit: cover;"></video>
-            <div class="text-center py-5" style="background-color: rgba(255, 255, 255, 0.7); width: 100%; position: absolute; top:10%;">
-                <h1 class="titulo-preto heading" style="margin-bottom:5rem;"> Administração </h1>
-                <div>
-                    <div class="dropdown">
-                        <button class="btn bg-roxo dropdown-toggle mb-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Selecione uma Operação
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Cadastrar</a>
-                            <a class="dropdown-item" href="#">Consultar</a>
-                            <a class="dropdown-item" href="#">Gerenciar</a>
-                            <a class="dropdown-item" href="#">Agendar</a>
-                            <a class="dropdown-item" href="#">Gerar Relatório</a>
-                        </div>
-                    </div>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-top:4rem;">
-                        <label class="btn btn-secondary active" style="background-color:#464362!important">
-                            <input type="radio" name="options" id="option1" checked> Cliente
-                        </label>
-                        <label class="btn btn-secondary" style="background-color:#464362!important">
-                            <input type="radio" name="options" id="option2"> Serviço
-                        </label>
-                        <label class="btn btn-secondary" style="background-color:#464362!important">
-                            <input type="radio" name="options" id="option3"> Demanda
-                        </label>
-                        <label class="btn btn-secondary" style="background-color:#464362!important">
-                            <input type="radio" name="options" id="option3"> Consultor
-                        </label>
-                    </div>
-                    <div class="ml-auto mr-auto" style="width:40vw; margin-top:3rem;">
-                        <form class="text-justify">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4">
-                                </div>
-                                <div class="form-group col-md-6">
-                                <label for="inputPassword4">Password</label>
-                                <input type="password" class="form-control" id="inputPassword4">
+        <div id="admin">
+
+            <div id="video-bg">
+                    <video id="top-video" autoplay loop muted playsinline style="position:absolute; top:0; pointer-events: none; z-index:-1; height:100vh; width:100%; object-fit:cover;"></video>
+                    <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:85vh; margin-top:2%;"> 
+                        <div class="text-center">
+                            <h1 class="titulo-preto heading" style="margin-bottom:5rem;"> Administração </h1>
+                            <div class="dropdown">
+                                <button class="btn bg-roxo dropdown-toggle mb-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Selecione uma Operação
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Cadastrar</a>
+                                    <a class="dropdown-item" href="#">Consultar</a>
+                                    <a class="dropdown-item" href="#">Gerenciar</a>
+                                    <a class="dropdown-item" href="#">Agendar</a>
+                                    <a class="dropdown-item" href="#">Gerar Relatório</a>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputAddress">Address</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                <label for="inputCity">City</label>
-                                <input type="text" class="form-control" id="inputCity">
-                                </div>
-                                <div class="form-group col-md-4">
-                                <label for="inputState">State</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                <label for="inputZip">Zip</label>
-                                <input type="text" class="form-control" id="inputZip">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-top:4rem;">
+                                <label class="btn btn-secondary active" style="background-color:#464362!important">
+                                    <input type="radio" name="options" id="option1" checked> Cliente
                                 </label>
-                                </div>
+                                <label class="btn btn-secondary" style="background-color:#464362!important">
+                                    <input type="radio" name="options" id="option2"> Serviço
+                                </label>
+                                <label class="btn btn-secondary" style="background-color:#464362!important">
+                                    <input type="radio" name="options" id="option3"> Demanda
+                                </label>
+                                <label class="btn btn-secondary" style="background-color:#464362!important">
+                                    <input type="radio" name="options" id="option3"> Consultor
+                                </label>
                             </div>
-                            <button type="submit" class="btn bg-roxo"> Sign in </button>
-                        </form>
+                            <div class="ml-auto mr-auto" style="width:40vw; margin-top:2rem;">
+                                <form class="text-justify">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress">Address</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6 col-sm-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-4 ">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <style>
+
+        @media(max-width:992px){
+            #form-bg{
+                padding-top:13vw;
+                margin-top:4vw!important;
+            }
+        }
+        @media(max-width:768px){
+            #top-video{
+                height:190vh!important;
+            }
+            #form-bg{
+                height:170vh!important;
+            }
+        }
+
+        </style>
+        
         <script>
                 
                 const videos = [
