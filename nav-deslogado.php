@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-tema">
+<nav class="navbar navbar-expand-lg navbar-dark bg-cinza">
     <a class="navbar-brand mx-5 my-n1" href="#">
         <img src="imagens/logo_WV.svg" width="55" height="55" alt="" loading="lazy">
     </a>

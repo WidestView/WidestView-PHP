@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title> Widest View </title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title> Widest View </title>
         <link rel="icon" href="imagens/icone_logo_WV.png"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
@@ -25,9 +25,49 @@
         <div id="home">
             
             <div class="position-relative" id="video-bg" style="height:55vw;">
+            <style>
+                @media(max-width:992px){
+                    #video-bg{
+                        height:100vw!important;
+                    }
+                    #top-video{
+                        height:100%;
+                        object-fit: cover;
+                    }
+                }
+                @media(max-width:768px){
+                    #video-bg{
+                        height:200vw!important;
+                    }
+                    #top-video{
+                        height:100%;
+                        object-fit: cover;
+                    }
+                }
+            </style>
                 <video id="top-video" autoplay loop muted playsinline style="width:100%; pointer-events: none;"></video>
-                <div style="position:absolute; top:30%; height:15vw; width:40%; background-color: rgba(255, 255, 255, 0.6);"> 
-                    <h1 class="ml-5" style="font-size:3.5vw; margin-top:3.1vw;"> Provavelmente o <br> slogan. </h1>
+                <div id="slogan-bg" style="position:absolute; top:30%; height:15vw; width:40%; background-color: rgba(255, 255, 255, 0.6);"> 
+                <style>
+                    @media(max-width:992px){
+                        #video-bg{
+                            display: flex;
+                            justify-content: center;
+                            width:100%;
+                        }
+                        #slogan-bg{
+                            background-color: transparent!important;
+                            color: white;
+                            text-align: center!important;
+                            width:90%!important;
+                            height:50%!important;
+                        }
+                        #slogan{
+                            margin:0 auto!important;
+                            font-size:10vw!important;
+                        }
+                    }
+                </style>
+                    <h1 id="slogan" class="ml-3 ml-md-5 ml-lg-5" style="font-size:3.5vw; margin-top:3.1vw;"> Provavelmente o <br> slogan. </h1>
                 </div>
             </div>
 
@@ -102,6 +142,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -122,7 +163,7 @@
         <div id="contato">
 
             <div class="fixed-bg bg-imagem">
-                <div class="h-100 bg-tema" style="padding-bottom: 4rem; color: #E5E0E0; opacity:0.8">
+                <div class="h-100 bg-cinza" style="padding-bottom: 4rem; color: #E5E0E0; opacity:0.8">
                     <h2 class="text-center titulo-branco heading"> Contato </h2>
                     <div class="container pt-5 pb-1" style="margin-top:4rem;">
                         <div class="row text-center text-md-left text-lg-left">

@@ -34,7 +34,7 @@ p.big {
     line-height: 2;
 }
 
-.bg-tema{
+.bg-cinza{
     background-color: #222222;
     color: white;
 }
@@ -46,6 +46,16 @@ p.big {
 
 .bg-tema:hover{
     color :#464362;
+}
+
+.bg-roxo{
+    background-color: #464362;
+    color: white;
+}
+
+.bg-roxo:hover{
+    background-color: #38354D;
+    color: white;
 }
 
 .titulo-preto{
@@ -225,3 +235,4 @@ p.big {
         transform: translate3d(0, 100%, 0);
     }
 }
+
