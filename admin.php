@@ -38,17 +38,17 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel"> Configurações </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
+                        <button type="button" class="btn bg-roxo"> Salvar </button>
                     </div>
                 </div>
             </div>
@@ -132,11 +132,11 @@
 
             <div id="video-bg">
                     <video id="top-video" autoplay loop muted playsinline style="position:absolute; top:0; pointer-events: none; z-index:-1; height:100vh; width:100%; object-fit:cover;"></video>
-                    <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:85vh; margin-top:2%;"> 
+                    <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:88.5vh; margin-top:1%;"> 
                         <div class="text-center">
                             <h1 class="titulo-preto heading" style="margin-bottom:5rem;"> Administração </h1>
                             <div class="dropdown">
-                                <button class="btn bg-roxo dropdown-toggle mb-5" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn bg-roxo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Selecione uma Operação
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -147,7 +147,7 @@
                                     <a class="dropdown-item" href="#">Gerar Relatório</a>
                                 </div>
                             </div>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-top:4rem;">
+                            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons" style="margin-top:2rem;">
                                 <label class="btn btn-secondary active" style="background-color:#464362!important">
                                     <input type="radio" name="options" id="option1" checked> Cliente
                                 </label>
@@ -162,39 +162,13 @@
                                 </label>
                             </div>
                             <div class="ml-auto mr-auto" style="width:40vw; margin-top:2rem;">
-                                <form class="text-justify">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Email</label>
-                                        <input type="email" class="form-control" id="inputEmail4">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Password</label>
-                                        <input type="password" class="form-control" id="inputPassword4">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress">Address</label>
-                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6 col-sm-6">
-                                        <label for="inputCity">City</label>
-                                        <input type="text" class="form-control" id="inputCity">
-                                        </div>
-                                        <div class="form-group col-md-4 ">
-                                        <label for="inputState">State</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                        <label for="inputZip">Zip</label>
-                                        <input type="text" class="form-control" id="inputZip">
-                                        </div>
-                                    </div>
-                                </form>
+
+                            <?php
+
+                                include 'form-rel.php';
+
+                            ?>
+
                             </div>
                         </div>
                     </div>
