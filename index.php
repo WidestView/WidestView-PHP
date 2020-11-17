@@ -6,6 +6,7 @@
         <title> Widest View </title>
         <link rel="icon" href="imagens/icone_logo_WV.png"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="owl.carousel.min.css">
         <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
     </head> 
     <body>
@@ -95,14 +96,222 @@
                             satisfação é temos como objetivo principal </i> <p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 p-5">
-                            <h4 class="text-center py-4"> A equipe </h4>
-                            <p class="text-center"> Conheça os membros que fizeram da Widest View realidade </p>
-                        </div>
-                    </div>
                 </div>
 
+                <div class="testimonial-wrapper">
+                    <div class="container">
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="testimonial-title">
+                                    <h3 class="mb-4"> Conheça Nossa Equipe </h3>
+                                    <p> Essas são as pessoas que tornaram a Widest View possível </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial owl-carousel">
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/felipe.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Felipe Beserra de Oliveira </h1>
+                                                <span class="title"> Desenvolvedor BackEnd e responsável pelo Projeto IOT </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/carvalho.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Gabriel Carvalho Simão </h1>
+                                                <span class="title"> Analista de Infraestrutura </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/isabela.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Isabela de Freitas Borejo </h1>
+                                                <span class="title"> Analista do Sistema </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/julia.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Júlia Souza Braz </h1>
+                                                <span class="title"> Analista do Sistema e Desenvolvedora do aplicativo mobile </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/pedro.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Pedro Fernandes Tamas </h1>
+                                                <span class="title"> Designer e Desenvolvedor FrontEnd </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/renan.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Renan Ribeiro Marcelino </h1>
+                                                <span class="title"> Desenvolvedor BackEnd </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="singel-testimonial row">
+                                <div class="col-md-12">
+                                    <div class="testimonial-main">
+                                        <div class="avatar-header row">
+                                            <div class="col-md-3">
+                                                <img src="imagens/yasmin.png">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h1 class="author-name"> Yasmin Francisquetti Barnes </h1>
+                                                <span class="title"> Desenvolvedora FrontEnd e Analista de Banco de Dados </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <style>
+
+                            .testimonial-wrapper{
+                                padding: 100px 0px;
+                                text-align: center;
+                            }
+
+                            .testimonial-main span{
+                                font-size: 13px;
+                                font-weight: 500;
+                            }
+                            
+                            .testimonial-main{
+                                margin:24px;
+                                box-shadow: 0px 0px 11px 0px #EEE;
+                                transition: transform .4s ease;
+                                padding: 12px;
+                            }
+
+                            .avatar-header{
+                                border-bottom: 1px solid #EEE;
+                            }
+
+                            .avatar-header h1, span{
+                                text-align:left;
+                                display: block;
+                            }
+
+                            .avatar-header h1{
+                                margin-top: 20px;
+                            }
+
+                            .avatar-header img{
+                                width: 90px;
+                                display: inline-block;
+                                padding: 12px 0px;
+                                border-radius: 50%;
+                            }
+
+                            .author-name{
+                                font-size: 25px;
+                            }
+
+                            .testimonial-main:hover{
+                                transform: scale(1.05);
+                            }
+
+                            .owl-dots{
+                                text-align: center;
+                                margin-top: 20px;
+                            }
+
+                            .owl-dots button span{
+                                width: 10px;
+                                line-height: 10px;
+                                background: #333;
+                                height: 10px;
+                                transition: all .3s ease;
+                                margin-left: 12px;
+                                border-radius: 100%;
+                            }
+
+                            .owl-dots button span {
+                                background: gray;
+                            }
+
+                            .owl-dots button.active span {
+                                background: #464362;
+                            }
+
+                            @media(max-width:992px){
+                                .testimonial-wrapper{
+                                    margin-top:-7.5vh;
+                                }
+                            }
+
+                            @media(max-width:768px){
+                                .testimonial-wrapper{
+                                    margin-top:-10vh;
+                                }
+                            }
+
+                        </style>
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -114,6 +323,7 @@
             <div class="align-items-center h-100" style="padding-bottom:6rem;">
                 <h2 class="text-center titulo-preto heading"> Portfólio </h2>
                 <p class="text-center" style="margin-top:5rem;"> Esses são alguns de nossos trabalhos </p>
+
             </div>
 
         </div>
@@ -217,6 +427,30 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>                   
+        <script src="owl.carousel.min.js"> </script>
+
+        <script>
+
+            $(document).ready(function(){
+
+                $(".testimonial").owlCarousel({
+                    items:2,
+                    loop:true,
+                    nav:false,
+                    dots:true,
+                    responsive: {
+                        0 : {
+                            items:1
+                        },
+                        992 : {
+                            items:2
+                        }
+                    }
+                })
+
+            })
+
+        </script>
 
     </body>
 </html>

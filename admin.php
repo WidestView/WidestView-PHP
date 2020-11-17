@@ -206,17 +206,31 @@
         <style>
 
         @media(max-width:992px){
+            #top-video{
+                height:130vh!important;
+            }
             #form-bg{
                 padding-top:13vw;
                 margin-top:4vw!important;
+                height:105vh!important;
             }
         }
-        @media(max-width:768px){
+        @media(width:768px){
             #top-video{
-                height:190vh!important;
+                height:110vh!important;
             }
             #form-bg{
-                height:170vh!important;
+                padding-top:13vw;
+                margin-top:4vw!important;
+                height:96vh!important;
+            }
+        }
+        @media(max-width:767px){
+            #top-video{
+                height:180vh!important;
+            }
+            #form-bg{
+                height:165vh!important;
             }
         }
 
