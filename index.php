@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
     </head> 
     <body>
+
         <?php
         
         $logged = true;
@@ -50,8 +51,8 @@
                             font-size:10vw!important;
                         }
                         #top-video{
-                        height:100%;
-                        object-fit: cover;
+                            height:100%;
+                            object-fit: cover;
                         }
                     }
                     @media(max-width:768px){
@@ -86,9 +87,7 @@
                         </div>
                         <div class="col-12 col-lg-4 col-md-6 py-5 px-4">
                             <h3 class="py-2">O que fazemos</h3>
-                            <p> <i>Trabalhamos com <a href="" style="color:black"> <u> Design Digital </u> </a>, <a href="" style="color:black"> <u> Análise de Sistemas </u> </a>,
-                            <a href="" style="color:black"><u>Análise e Desenvolvimento de Banco de Dados</u></a>, Programação <a href="" style="color:black"><u>Front</u></a>
-                            e <a href="" style="color:black"> <u> BackEnd </u> </a> e <a href="" style="color:black"> <u> Análise de Infraestrutura </u> </a> </i> <p>
+                            <p> <i>Trabalhamos com Design Digital, Análise de Sistemas, Análise e Desenvolvimento de Banco de Dados, Programação Front/BackEnd e Análise de Infraestrutura </i> <p>
                         </div>
                         <div class="col-12 col-lg-4 col-md-6 py-5 px-4">
                             <h3 class="py-2"> Nossos Objetivos </h3>
@@ -229,7 +228,7 @@
                         <style>
 
                             .testimonial-wrapper{
-                                padding: 100px 0px;
+                                padding-top: 100px;
                                 text-align: center;
                             }
 
@@ -240,22 +239,9 @@
                             
                             .testimonial-main{
                                 margin:24px;
-                                box-shadow: 0px 0px 11px 0px #EEE;
+                                box-shadow: 3px 3px 7px 0px #464362;
                                 transition: transform .4s ease;
                                 padding: 12px;
-                            }
-
-                            .avatar-header{
-                                border-bottom: 1px solid #EEE;
-                            }
-
-                            .avatar-header h1, span{
-                                text-align:left;
-                                display: block;
-                            }
-
-                            .avatar-header h1{
-                                margin-top: 20px;
                             }
 
                             .avatar-header img{
@@ -341,19 +327,19 @@
                                 <i class="fas fa-envelope-open-text" style="font-size: 35px; margin-bottom: 1rem;"> </i>
                                 <h3> E-mail </h3>
                                 <p> Alguma dúvida? Crítica? Sugestão? Proposta de serviço? Encaminhe para nós! </p>  
-                                <h5 style="color:#8986AC"> widestview@gmail.com </h5>
+                                <h5> widestview@gmail.com </h5>
                             </div>
                             <div class="col-12 item-contato col-md-6 col-lg-4 px-4">
                                 <i class="fas fa-phone" style="font-size: 35px; margin-bottom: 1rem;"> </i>
                                 <h3> Telefone </h3>
                                 <p> Deseja estabelecer um contato direto e mais pessoal com nós? Não hesite em ligar! </p>
-                                <h5 style="color:#8986AC"> (11) 95384-8594 </h5>
+                                <h5> (11) 95384-8594 </h5>
                             </div>
                             <div class="col-12 col-md-12 col-lg-4 px-4">
                                 <i class="fas fa-map-marker-alt" style="font-size: 35px; margin-bottom: 1rem;"> </i>
                                 <h3> Endereço </h3>
                                 <p> Caso queira fazer uma visita à nossa sede e ver pessoalmente nosso trabalho. </p>
-                                <h5 style="color:#8986AC"> Rua Luiz Scott, 209 </h5>
+                                <h5> Rua Luiz Scott, 209 </h5>
                             </div>
                         </div>
 
@@ -419,6 +405,7 @@
                 }
                 
                 getNewVideo();
+
             </script>
         
         <script type="text/javascript" src="main.js"></script>

@@ -6,18 +6,18 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-3 ">
-            <li class="nav-item active nav-item">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav mx-3">
+            <li class="nav-item d-flex justify-content-center">
+                <a class="nav-link" href="index.php#home">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item ml-4">
-                <a class="nav-link" href="#empresa">Empresa</a>
+            <li class="nav-item ml-lg-4 d-flex justify-content-center">
+                <a class="nav-link" href="index.php#empresa">Empresa</a>
             </li>
-            <li class="nav-item nav-item ml-4">
-                <a class="nav-link" href="#portfolio">Portfólio</a>
+            <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
+                <a class="nav-link" href="index.php#portfolio">Portfólio</a>
             </li>
-            <li class="nav-item nav-item ml-4">
-                <a class="nav-link" href="#contato">Contato</a>
+            <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
+                <a class="nav-link" href="index.php#contato">Contato</a>
             </li>
         </ul>
         <div class="dropdown ml-auto mx-4">
@@ -38,7 +38,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1"> Lembre de mim </label>
                     </div>
-                    <button type="submit" class="btn bg-tema"> Entrar </button>
+                    <button type="submit" class="btn bg-roxo"> Entrar </button>
                 </form>
             </div>
         </div>

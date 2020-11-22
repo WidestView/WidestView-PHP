@@ -12,7 +12,12 @@
 
         <?php
         
-        include 'nav-logado1.php';
+        $logged = true;
+        if($logged){
+            include 'nav-logado1.php';
+        } else {
+            include 'nav-deslogado.php';
+        }
         
         ?>
 
@@ -35,16 +40,29 @@
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="margin-top:15%;">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header bg-roxo">
                         <h5 class="modal-title" id="exampleModalLabel"> Configurações </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        
+                        <div class="form-group">
+                            <label for="inputProj"> Esquema de cores </label>
+                            <select id="inputProj" class="form-control">
+                                <option selected> Claro </option>
+                                <option> Escuro </option>
+                            </select>
+                        </div>  
+                        <div class="form-group">
+                            <label for="inputProj"> Linguagem </label>
+                            <select id="inputProj" class="form-control">
+                                <option selected> Português </option>
+                                <option> Inglês </option>
+                            </select>
+                        </div>  
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
@@ -140,34 +158,19 @@
                                     Selecione uma Operação
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Cadastrar</a>
-                                    <a class="dropdown-item" href="#">Consultar</a>
-                                    <a class="dropdown-item" href="#">Gerenciar</a>
-                                    <a class="dropdown-item" href="#">Agendar</a>
-                                    <a class="dropdown-item" href="#">Gerar Relatório</a>
+                                    <a class="dropdown-item" id="drop-cadastrar" href="#"> Cadastrar </a>
+                                    <a class="dropdown-item" id="drop-consultar" href="#"> Consultar </a>
+                                    <a class="dropdown-item" id="drop-gerenciar" href="#"> Gerenciar </a>
+                                    <a class="dropdown-item" id="drop-agendar" href="#"> Agendar </a>
+                                    <a class="dropdown-item"id="drop-gerar-rel" href="#"> Gerar Relatório </a>
                                 </div>
                             </div>
-                            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons" style="margin-top:2rem;">
-                                <label class="btn btn-secondary active" style="background-color:#464362!important">
-                                    <input type="radio" name="options" id="option1" checked> Cliente
-                                </label>
-                                <label class="btn btn-secondary" style="background-color:#464362!important">
-                                    <input type="radio" name="options" id="option2"> Serviço
-                                </label>
-                                <label class="btn btn-secondary" style="background-color:#464362!important">
-                                    <input type="radio" name="options" id="option3"> Demanda
-                                </label>
-                                <label class="btn btn-secondary" style="background-color:#464362!important">
-                                    <input type="radio" name="options" id="option3"> Consultor
-                                </label>
+                            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons" style="margin-top:2rem;"
+                                id="option-root">
                             </div>
                             <div class="ml-auto mr-auto" style="width:40vw; margin-top:2rem;">
 
-                            <?php
-
-                                include 'form-rel.php';
-
-                            ?>
+                            <div id="operation-outlet"></div>
 
                             </div>
                         </div>
@@ -246,6 +249,8 @@
                 
                 getNewVideo();
             </script>
+
+        <script type="text/javascript" src="admin-main.js"></script>  
 
         <script src="https://kit.fontawesome.com/87aae4010f.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

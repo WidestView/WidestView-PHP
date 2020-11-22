@@ -11,7 +11,7 @@
             <input type="text" class="form-control" id="inputNomeSoc">
         </div>
         <div class="form-group col-md-4">
-            <label for="inputData"> Data de Nascimento </label>
+            <label for="inputData"> Dt. Nascimento </label>
             <input class="form-control" type="date" value="2020-12-31" id="inputData">
         </div>
     </div>
