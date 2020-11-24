@@ -1,443 +1,315 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title> Widest View </title>
-        <link rel="icon" href="imagens/icone_logo_WV.png"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="owl.carousel.min.css">
-        <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
-    </head> 
-    <body>
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+ * @license	https://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-        <?php
-        
-        $logged = true;
-        if($logged){
-            include 'nav-logado1.php';
-        } else {
-            include 'nav-deslogado.php';
-        }
-        
-        ?>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-        <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-        <div id="home">
-            
-            <div class="position-relative" id="video-bg" style="height:55vw;">
-                <video id="top-video" autoplay loop muted playsinline style="width:100%; pointer-events: none;"></video>
-                <div id="slogan-bg" style="position:absolute; top:30%; height:15vw; width:40%; background-color: rgba(255, 255, 255, 0.6);"> 
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-                <style>
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-                    @media(max-width:992px){
-                        #video-bg{
-                            display: flex;
-                            justify-content: center;
-                            width:100%;
-                            height:100vw!important;
-                        }
-                        #slogan-bg{
-                            background-color: transparent!important;
-                            color: white;
-                            text-align: center!important;
-                            width:90%!important;
-                            height:50%!important;
-                        }
-                        #slogan{
-                            margin:0 auto!important;
-                            font-size:10vw!important;
-                        }
-                        #top-video{
-                            height:100%;
-                            object-fit: cover;
-                        }
-                    }
-                    @media(max-width:768px){
-                        #video-bg{
-                            height:200vw!important;
-                        }
-                        #top-video{
-                            height:100%;
-                            object-fit: cover;
-                        }
-                    }
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-                </style>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-                    <h1 id="slogan" class="ml-3 ml-md-5 ml-lg-5" style="font-size:3.5vw; margin-top:3.1vw;"> Provavelmente o <br> slogan. </h1>
-                </div>
-            </div>
-        </div>
-  
-        <hr class="my-auto"/>
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
-        <div id="empresa">
 
-            <div class="align-items-center h-100" style="padding-bottom:2rem;">
-                <h2 class="text-center titulo-preto heading" style="padding-top:7rem"> Empresa </h2>
-                <div class="container text-justify" style="margin-top:5rem;">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 py-5 px-4">
-                            <h3 class="py-2"> Quem somos </h3>
-                            <p> <i> A Widest View é um grupo de jovens empreendedores originada ainda em 2020, com o objetivo de prestar serviços na área
-                            de desenvolvimento de sistemas no geral. </i> </p>
-                        </div>
-                        <div class="col-12 col-lg-4 col-md-6 py-5 px-4">
-                            <h3 class="py-2">O que fazemos</h3>
-                            <p> <i>Trabalhamos com Design Digital, Análise de Sistemas, Análise e Desenvolvimento de Banco de Dados, Programação Front/BackEnd e Análise de Infraestrutura </i> <p>
-                        </div>
-                        <div class="col-12 col-lg-4 col-md-6 py-5 px-4">
-                            <h3 class="py-2"> Nossos Objetivos </h3>
-                            <p> <i> Alvejamos crescer no mercado da programação e prestação de serviços para os mais diferentes tipos de clientes, e sua 
-                            satisfação é temos como objetivo principal </i> <p>
-                        </div>
-                    </div>
-                </div>
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-                <div class="testimonial-wrapper">
-                    <div class="container">
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-                        <div class="row mb-3">
-                            <div class="col-md-12">
-                                <div class="testimonial-title">
-                                    <h3 class="mb-4"> Conheça Nossa Equipe </h3>
-                                    <p> Essas são as pessoas que tornaram a Widest View possível </p>
-                                </div>
-                            </div>
-                        </div>
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-                        <div class="testimonial owl-carousel">
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/felipe.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Felipe Beserra de Oliveira </h1>
-                                                <span class="title"> Desenvolvedor BackEnd e responsável pelo Projeto IOT </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/carvalho.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Gabriel Carvalho Simão </h1>
-                                                <span class="title"> Analista de Infraestrutura </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/isabela.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Isabela de Freitas Borejo </h1>
-                                                <span class="title"> Analista do Sistema </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/julia.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Júlia Souza Braz </h1>
-                                                <span class="title"> Analista do Sistema e Desenvolvedora do aplicativo mobile </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/pedro.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Pedro Fernandes Tamas </h1>
-                                                <span class="title"> Designer e Desenvolvedor FrontEnd </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/renan.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Renan Ribeiro Marcelino </h1>
-                                                <span class="title"> Desenvolvedor BackEnd </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/yasmin.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Yasmin Francisquetti Barnes </h1>
-                                                <span class="title"> Desenvolvedora FrontEnd e Analista de Banco de Dados </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
 
-                        </div>
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
-                        <style>
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-                            .testimonial-wrapper{
-                                padding-top: 100px;
-                                text-align: center;
-                            }
+	// Path to the system directory
+	define('BASEPATH', $system_path);
 
-                            .testimonial-main span{
-                                font-size: 13px;
-                                font-weight: 500;
-                            }
-                            
-                            .testimonial-main{
-                                margin:24px;
-                                box-shadow: 3px 3px 7px 0px #464362;
-                                transition: transform .4s ease;
-                                padding: 12px;
-                            }
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
-                            .avatar-header img{
-                                width: 90px;
-                                display: inline-block;
-                                padding: 12px 0px;
-                                border-radius: 50%;
-                            }
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
 
-                            .author-name{
-                                font-size: 25px;
-                            }
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
 
-                            .testimonial-main:hover{
-                                transform: scale(1.05);
-                            }
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
 
-                            .owl-dots{
-                                text-align: center;
-                                margin-top: 20px;
-                            }
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
 
-                            .owl-dots button span{
-                                width: 10px;
-                                line-height: 10px;
-                                background: #333;
-                                height: 10px;
-                                transition: all .3s ease;
-                                margin-left: 12px;
-                                border-radius: 100%;
-                            }
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
 
-                            .owl-dots button span {
-                                background: gray;
-                            }
-
-                            .owl-dots button.active span {
-                                background: #464362;
-                            }
-
-                            @media(max-width:992px){
-                                .testimonial-wrapper{
-                                    margin-top:-7.5vh;
-                                }
-                            }
-
-                            @media(max-width:768px){
-                                .testimonial-wrapper{
-                                    margin-top:-10vh;
-                                }
-                            }
-
-                        </style>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <hr class="my-auto">
-
-        <div id="portfolio">
-
-            <div class="align-items-center h-100" style="padding-bottom:6rem;">
-                <h2 class="text-center titulo-preto heading"> Portfólio </h2>
-                <p class="text-center" style="margin-top:5rem;"> Esses são alguns de nossos trabalhos </p>
-
-            </div>
-
-        </div>
-
-        <hr class="my-auto">
-
-        <div id="contato">
-
-            <div class="fixed-bg bg-imagem">
-                <div class="h-100 bg-cinza" style="padding-bottom: 4rem; color: #E5E0E0; opacity:0.8">
-                    <h2 class="text-center titulo-branco heading"> Contato </h2>
-                    <div class="container pt-5 pb-1" style="margin-top:4rem;">
-                        <div class="row text-center text-md-left text-lg-left">
-                            <div class="col-12 item-contato col-md-6 col-lg-4 px-4">
-                                <i class="fas fa-envelope-open-text" style="font-size: 35px; margin-bottom: 1rem;"> </i>
-                                <h3> E-mail </h3>
-                                <p> Alguma dúvida? Crítica? Sugestão? Proposta de serviço? Encaminhe para nós! </p>  
-                                <h5> widestview@gmail.com </h5>
-                            </div>
-                            <div class="col-12 item-contato col-md-6 col-lg-4 px-4">
-                                <i class="fas fa-phone" style="font-size: 35px; margin-bottom: 1rem;"> </i>
-                                <h3> Telefone </h3>
-                                <p> Deseja estabelecer um contato direto e mais pessoal com nós? Não hesite em ligar! </p>
-                                <h5> (11) 95384-8594 </h5>
-                            </div>
-                            <div class="col-12 col-md-12 col-lg-4 px-4">
-                                <i class="fas fa-map-marker-alt" style="font-size: 35px; margin-bottom: 1rem;"> </i>
-                                <h3> Endereço </h3>
-                                <p> Caso queira fazer uma visita à nossa sede e ver pessoalmente nosso trabalho. </p>
-                                <h5> Rua Luiz Scott, 209 </h5>
-                            </div>
-                        </div>
-
-                        <style>
-                            @media(max-width:992px){
-                                .item-contato{
-                                    padding-bottom:4rem;
-                                }
-                            }
-                        </style>
-
-                        <div class="row text-center" style="padding-top:4rem;">
-                            <div class="col text-center">
-                                <h4> Nossas redes sociais: </h4>
-                            </div>
-                        </div>
-                        <div class="row pt-5">
-                            <div class="social-menu ml-auto mr-auto">
-                                <ul>
-                                    <li class="space-social"><a href="https://www.facebook.com/widest.view.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="space-social"><a href="https://www.instagram.com/widest_view/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                    <li class="space-social"><a href="https://www.linkedin.com/in/widest-view-800ab41ba/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script>
-                
-                const videos = [
-                    'imagens/bgvideos/bgvideo1.mp4',
-                    'imagens/bgvideos/bgvideo2.mp4',
-                    'imagens/bgvideos/bgvideo3.mp4',
-                    'imagens/bgvideos/bgvideo4.mp4'
-                ]
-                
-                function getNewVideo(){
-                    let lastVideo = localStorage.getItem('lastVideo');
-                    let video = '';
-                    if(lastVideo === null){
-                        video = videos[Math.floor(Math.random() * videos.length)];    
-                    }else{
-                        const index = videos.indexOf(lastVideo);
-                        if (index > -1) {
-                            let availableVideos = videos;
-                            availableVideos.splice(index,1);
-                            video = availableVideos[Math.floor(Math.random() * availableVideos.length)];    
-                        }else{
-                            console.log('Error on localstorage: ' + lastVideo);
-                            video = videos[Math.floor(Math.random() * videos.length)];    
-                        }
-                    }
-                    setVideo(video);
-                }
-                
-                function setVideo(video){
-                    document.getElementById('top-video').src = video; 
-                    localStorage.setItem('lastVideo',video);
-                    console.log(video);
-                }
-                
-                getNewVideo();
-
-            </script>
-        
-        <script type="text/javascript" src="main.js"></script>
-
-        <script src="https://kit.fontawesome.com/87aae4010f.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>                   
-        <script src="owl.carousel.min.js"> </script>
-
-        <script>
-
-            $(document).ready(function(){
-
-                $(".testimonial").owlCarousel({
-                    items:2,
-                    loop:true,
-                    nav:false,
-                    dots:true,
-                    responsive: {
-                        0 : {
-                            items:1
-                        },
-                        992 : {
-                            items:2
-                        }
-                    }
-                })
-
-            })
-
-        </script>
-
-    </body>
-</html>
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
