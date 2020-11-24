@@ -1,4 +1,8 @@
+# Custom .gitignore
+
 node_modules
+resources/videos
+resources/videos/*
 
 
 # Native .gitignore from CI
