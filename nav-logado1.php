@@ -24,15 +24,8 @@
             </li>
         </ul>
         <div class="d-flex justify-content-center pt-auto ml-lg-auto mb-3 mb-lg-0 mt-3 mt-lg-0">
-            <div class="dropdown mr-4 ">
-                <img src="imagens/profile.png" style="width:45px;" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="dropdown-menu dropdown-menu-lg-right mt-4" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div> 
-            <a href="#" class="mr-2 mr-lg-5 mt-auto mb-auto" style="color:white;"> Sair </a>
-        </div>
+            <img src="imagens/profile.png" class="mr-4" style="width:45px;">
+        </div> 
+        <a href="#" class="mr-2 mr-lg-5 mt-auto mb-auto text-white"> Sair </a>
     </div>
 </nav>

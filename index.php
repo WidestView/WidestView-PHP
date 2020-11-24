@@ -97,207 +97,206 @@
                     </div>
                 </div>
 
-                <div class="testimonial-wrapper">
-                    <div class="container">
+                    <div class="testimonial-wrapper">
+                        <div class="container">
 
-                        <div class="row mb-3">
-                            <div class="col-md-12">
-                                <div class="testimonial-title">
-                                    <h3 class="mb-4"> Conheça Nossa Equipe </h3>
-                                    <p> Essas são as pessoas que tornaram a Widest View possível </p>
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="testimonial-title">
+                                        <h3 class="mb-4"> Conheça Nossa Equipe </h3>
+                                        <p> Essas são as pessoas que tornaram a Widest View possível </p>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="testimonial owl-carousel">
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/felipe.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Felipe Beserra de Oliveira </h1>
+                                                    <span class="title"> Desenvolvedor BackEnd e responsável pelo Projeto IOT </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/carvalho.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Gabriel Carvalho Simão </h1>
+                                                    <span class="title"> Analista de Infraestrutura </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/isabela.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Isabela de Freitas Borejo </h1>
+                                                    <span class="title"> Analista do Sistema </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/julia.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Júlia Souza Braz </h1>
+                                                    <span class="title"> Analista do Sistema e Desenvolvedora do aplicativo mobile </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/pedro.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Pedro Fernandes Tamas </h1>
+                                                    <span class="title"> Designer e Desenvolvedor FrontEnd </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/renan.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Renan Ribeiro Marcelino </h1>
+                                                    <span class="title"> Desenvolvedor BackEnd </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="singel-testimonial row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial-main">
+                                            <div class="avatar-header row">
+                                                <div class="col-md-3">
+                                                    <img src="imagens/yasmin.png">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h1 class="author-name"> Yasmin Francisquetti Barnes </h1>
+                                                    <span class="title"> Desenvolvedora FrontEnd e Analista de Banco de Dados </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                        <div class="testimonial owl-carousel">
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/felipe.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Felipe Beserra de Oliveira </h1>
-                                                <span class="title"> Desenvolvedor BackEnd e responsável pelo Projeto IOT </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/carvalho.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Gabriel Carvalho Simão </h1>
-                                                <span class="title"> Analista de Infraestrutura </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/isabela.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Isabela de Freitas Borejo </h1>
-                                                <span class="title"> Analista do Sistema </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/julia.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Júlia Souza Braz </h1>
-                                                <span class="title"> Analista do Sistema e Desenvolvedora do aplicativo mobile </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/pedro.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Pedro Fernandes Tamas </h1>
-                                                <span class="title"> Designer e Desenvolvedor FrontEnd </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/renan.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Renan Ribeiro Marcelino </h1>
-                                                <span class="title"> Desenvolvedor BackEnd </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="singel-testimonial row">
-                                <div class="col-md-12">
-                                    <div class="testimonial-main">
-                                        <div class="avatar-header row">
-                                            <div class="col-md-3">
-                                                <img src="imagens/yasmin.png">
-                                            </div>
-                                            <div class="col-md-9">
-                                                <h1 class="author-name"> Yasmin Francisquetti Barnes </h1>
-                                                <span class="title"> Desenvolvedora FrontEnd e Analista de Banco de Dados </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <style>
-
-                            .testimonial-wrapper{
-                                padding-top: 100px;
-                                text-align: center;
-                            }
-
-                            .testimonial-main span{
-                                font-size: 13px;
-                                font-weight: 500;
-                            }
-                            
-                            .testimonial-main{
-                                margin:24px;
-                                box-shadow: 3px 3px 7px 0px #464362;
-                                transition: transform .4s ease;
-                                padding: 12px;
-                            }
-
-                            .avatar-header img{
-                                width: 90px;
-                                display: inline-block;
-                                padding: 12px 0px;
-                                border-radius: 50%;
-                            }
-
-                            .author-name{
-                                font-size: 25px;
-                            }
-
-                            .testimonial-main:hover{
-                                transform: scale(1.05);
-                            }
-
-                            .owl-dots{
-                                text-align: center;
-                                margin-top: 20px;
-                            }
-
-                            .owl-dots button span{
-                                width: 10px;
-                                line-height: 10px;
-                                background: #333;
-                                height: 10px;
-                                transition: all .3s ease;
-                                margin-left: 12px;
-                                border-radius: 100%;
-                            }
-
-                            .owl-dots button span {
-                                background: gray;
-                            }
-
-                            .owl-dots button.active span {
-                                background: #464362;
-                            }
-
-                            @media(max-width:992px){
-                                .testimonial-wrapper{
-                                    margin-top:-7.5vh;
-                                }
-                            }
-
-                            @media(max-width:768px){
-                                .testimonial-wrapper{
-                                    margin-top:-10vh;
-                                }
-                            }
-
-                        </style>
-
                     </div>
-                </div>
+
+                <style>
+
+                    .testimonial-wrapper{
+                        padding-top: 100px;
+                        text-align: center;
+                    }
+
+                    .testimonial-main span{
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                            
+                    .testimonial-main{
+                        margin:24px;
+                        box-shadow: 3px 3px 7px 0px #464362;
+                        transition: transform .4s ease;
+                        padding: 12px;
+                    }
+
+                    .avatar-header img{
+                        width: 90px;
+                        display: inline-block;
+                        padding: 12px 0px;
+                        border-radius: 50%;
+                    }
+
+                    .author-name{
+                        font-size: 25px;
+                    }
+
+                    .testimonial-main:hover{
+                        transform: scale(1.05);
+                    }
+
+                    .owl-dots{
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+
+                    .owl-dots button span{
+                        width: 10px;
+                        line-height: 10px;
+                        background: #333;
+                        height: 10px;
+                        transition: all .3s ease;
+                        margin-left: 12px;
+                        border-radius: 100%;
+                    }
+
+                    .owl-dots button span {
+                        background: gray;
+                    }
+
+                    .owl-dots button.active span {
+                        background: #464362;
+                    }
+
+                    @media(max-width:992px){
+                        .testimonial-wrapper{
+                            margin-top:-7.5vh;
+                        }
+                    }
+
+                    @media(max-width:768px){
+                        .testimonial-wrapper{
+                            margin-top:-10vh;
+                        }
+                    }
+
+                </style>
             </div>
 
         </div>
