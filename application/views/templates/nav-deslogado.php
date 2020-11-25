@@ -13,6 +13,9 @@
             <li class="nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" href="../../../index.php#empresa">Empresa</a>
             </li>
+            <li class="nav-item ml-lg-4 d-flex justify-content-center">
+                <a class="nav-link" href="/index.php/home/index#empresa">Equipe</a>
+            </li>
             <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" href="../../../index.php#portfolio">Portfólio</a>
             </li>

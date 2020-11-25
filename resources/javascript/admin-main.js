@@ -46,7 +46,7 @@ const operations = {
     },
 
     '#drop-agendar': {
-        'servico': 'form-agen-sevico.php',
+        'servico': '',
     },
     '#drop-gerar-rel': {
         'se': ''

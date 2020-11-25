@@ -71,11 +71,30 @@ p.big {
     font-size: 1.9rem;
 }
 
+.heading2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    font-size: 1.9rem;
+}
+
 .heading::after{
     content: "";
     width: 10rem;
     height: .2rem;
     background-color: #464362;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.heading2::after{
+    content: "";
+    width: 10rem;
+    height: .2rem;
+    background-color: white;
     position: absolute;
     bottom: -2rem;
     left: 50%;
@@ -92,11 +111,11 @@ p.big {
 }
 
 .bg-imagem{
-    background-image:url('imagens/bg-teste2.jpg');
+    background-image:url('../../imagens/bg-teste4.jpg');
 }
 
 .bg-imagem2{
-    background-image:url('imagens/bg-rodape.png');
+    background-image:url('../../imagens/bg-teste5.jpg');
 }
 
 .social-menu ul {

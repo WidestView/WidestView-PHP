@@ -194,10 +194,10 @@
         <script>
                 
                 const videos = [
-                    'imagens/bgvideos/bgvideo1.mp4',
-                    'imagens/bgvideos/bgvideo2.mp4',
-                    'imagens/bgvideos/bgvideo3.mp4',
-                    'imagens/bgvideos/bgvideo4.mp4'
+                    '/resources/videos/bgvideo1.mp4',
+                    '/resources/videos/bgvideo2.mp4',
+                    '/resources/videos/bgvideo3.mp4',
+                    '/resources/videos/bgvideo4.mp4'
                 ]
                 
                 function getNewVideo(){
