@@ -49,11 +49,6 @@ p.big {
     color: white;
 }
 
-.bg-roxo:hover{
-    background-color: #38354D;
-    color: white;
-}
-
 .titulo-preto{
     padding-top: 5rem;
     color: black;
@@ -115,7 +110,7 @@ p.big {
 }
 
 .bg-imagem2{
-    background-image:url('../../imagens/bg-teste5.jpg');
+    background-image:url('../../imagens/bg-teste6.jpg');
 }
 
 .social-menu ul {
