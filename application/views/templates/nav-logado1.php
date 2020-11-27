@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-cinza">
     <a class="navbar-brand mx-5 my-n1" href="#">
-        <img src="../../imagens/logo_WV.svg" width="55" height="55" alt="" loading="lazy">
+        <img src="/resources/imagens/logo_WV.svg" width="55" height="55" alt="" loading="lazy">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,9 +27,10 @@
             </li>
         </ul>
         <div class="d-flex justify-content-center pt-auto ml-lg-auto mb-3 mb-lg-0 mt-3 mt-lg-0">
-            <img src="../../imagens/profile.png" class="mr-4" style="width:45px;">
-        </div> 
-        <a href="#" class="mr-2 mr-lg-5 mt-auto mb-auto text-white"> Sair </a>
+            <img src="/resources/imagens/profile.png" class="mr-2" style="width:45px;">
+        </div>
+        <p class="mr-0 mr-lg-5 mt-auto mb-auto text-white"> <?php echo $_SESSION['username'] ?> </p>
+        <a href="#" class="btn btn-danger mr-2 mr-lg-3 mt-auto mb-auto"> Sair </a>
 
     </div>
 </nav>

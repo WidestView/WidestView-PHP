@@ -63,7 +63,7 @@ let selectedOperation = null;
 
 async function changeForm(form) {
 
-    const url = `http://localhost/index.php/admin/form/${form}`;
+    const url = `http://beserrovsky.ddns.net:3333/index.php/admin/form/${form}`;
 
 
     try {

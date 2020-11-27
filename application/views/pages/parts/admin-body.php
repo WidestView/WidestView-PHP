@@ -222,7 +222,6 @@
                 function setVideo(video){
                     document.getElementById('top-video').src = video; 
                     localStorage.setItem('lastVideo',video);
-                    console.log(video);
                 }
                 
                 getNewVideo();

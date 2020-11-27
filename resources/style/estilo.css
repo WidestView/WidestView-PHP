@@ -106,11 +106,11 @@ p.big {
 }
 
 .bg-imagem{
-    background-image:url('../../imagens/bg-teste4.jpg');
+    background-image:url('/resources/imagens/bg-teste4.jpg');
 }
 
 .bg-imagem2{
-    background-image:url('../../imagens/bg-teste6.jpg');
+    background-image:url('/resources/imagens/bg-teste6.jpg');
 }
 
 .social-menu ul {
