@@ -28,18 +28,14 @@
                 Entrar
             </a>   
             <div class="dropdown-menu dropdown-menu-lg-right mt-4 px-3" style="width:13vw;" aria-labelledby="dropdownMenuLink">
-                <form>
+                <form action="/home/login" method="post">
                     <div class="form-group">
-                        <label for="exampleInputEmail1"> Email </label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="email"> Email </label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1"> Senha </label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1"> Lembre de mim </label>
+                        <label for="password"> Senha </label>
+                        <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <button type="submit" class="btn bg-roxo"> Entrar </button>
                 </form>
@@ -47,3 +43,6 @@
         </div>
     </div>
 </nav>
+<script>
+
+</script>

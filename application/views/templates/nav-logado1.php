@@ -30,7 +30,7 @@
             <img src="/resources/imagens/profile.png" class="mr-2" style="width:45px;">
         </div>
         <p class="mr-0 mr-lg-5 mt-auto mb-auto text-white"> <?php echo $_SESSION['username'] ?> </p>
-        <a href="#" class="btn btn-danger mr-2 mr-lg-3 mt-auto mb-auto"> Sair </a>
+        <a href="/home/logout" class="btn btn-danger mr-2 mr-lg-3 mt-auto mb-auto"> Sair </a>
 
     </div>
 </nav>
