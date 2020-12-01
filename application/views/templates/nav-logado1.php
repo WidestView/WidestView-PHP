@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-cinza">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <a class="navbar-brand mx-5 my-n1" href="#">
         <img src="/resources/imagens/logo_WV.svg" width="55" height="55" alt="" loading="lazy">
     </a>
@@ -26,10 +26,7 @@
                 <a class="nav-link" style="color:#8986AC;" href="/index.php/admin">Administração</a>
             </li>
         </ul>
-        <div class="d-flex justify-content-center pt-auto ml-lg-auto mb-3 mb-lg-0 mt-3 mt-lg-0">
-            <img src="/resources/imagens/profile.png" class="mr-2" style="width:45px;">
-        </div>
-        <p class="mr-0 mr-lg-5 mt-auto mb-auto text-white"> <?php echo $_SESSION['username'] ?> </p>
+        <p class="mr-0 mr-lg-5 mt-auto mb-auto text-white ml-auto"> Olá, <?php echo $_SESSION['username'] ?>! </p>
         <a href="/home/logout" class="btn btn-danger mr-2 mr-lg-3 mt-auto mb-auto"> Sair </a>
 
     </div>

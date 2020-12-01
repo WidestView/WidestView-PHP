@@ -1,0 +1,102 @@
+@import 'general';
+
+@media(max-width:992px){
+    #video-bg{
+        display: flex;
+        justify-content: center;
+        width:100%;
+        height:100vw!important;
+    }
+    #slogan-bg{
+        background-color: transparent!important;
+        color: white;
+        text-align: center!important;
+        width:90%!important;
+        height:50%!important;
+    }
+    #slogan{
+        margin:0 auto!important;
+        font-size:10vw!important;
+    }
+    #top-video{
+        height:100%;
+        object-fit: cover;
+    }
+    .testimonial-wrapper{
+        margin-top:-7.5vh;
+    }
+
+    .item-contato{
+        padding-bottom:4rem;
+    }
+}
+
+@media(max-width:768px){
+    #video-bg{
+        height:200vw!important;
+    }
+    #top-video{
+        height:100%;
+        object-fit: cover;
+    }
+    .testimonial-wrapper{
+        margin-top:-10vh;
+    }
+}
+
+.testimonial-wrapper{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.testimonial-main span{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.testimonial-main{
+    margin:24px;
+    transition: transform .4s ease;
+    padding: 12px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.avatar-header img{
+    width: 90px;
+    display: inline-block;
+    padding: 12px 0px;
+    border-radius: 50%;
+}
+
+.author-name{
+    font-size: 25px;
+}
+
+.testimonial-main:hover{
+    transform: scale(1.05);
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dots button span{
+    width: 10px;
+    line-height: 10px;
+    background: #333;
+    height: 10px;
+    transition: all .3s ease;
+    margin-left: 12px;
+    border-radius: 100%;
+}
+
+.owl-dots button span {
+    background: gray;
+}
+
+.owl-dots button.active span {
+    background: #464362;
+}
+
+

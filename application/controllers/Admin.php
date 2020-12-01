@@ -21,9 +21,13 @@ class Admin extends CI_Controller
             return;
 		}
         
-        $this->load->view('templates/page-start.html');
-        $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
-        $this->load->view('pages/parts/admin-body');
+		$this->load->view('templates/page-start.html');
+
+		$this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
+        
+        $this->load->view('pages/admin/admin');
+
+        $this->load->view('templates/page-end.html');
     }
 
     public function form(string $name)
@@ -37,7 +41,7 @@ class Admin extends CI_Controller
             return;
 		}
 
-        $this->load->view("forms/$name");
+        $this->load->view("pages/admin/forms/$name");
     }
 
     public function tableQuery(string $type = ''){
@@ -65,14 +69,32 @@ class Admin extends CI_Controller
                 }
             break;
             default:
-                $data['heading'] = 'Invalid type in tableQuery';
-                $data['message'] = $type.' is not a valid type';
-                $this->load->view("errors/cli/error_general.php",$data);
+                $this->load->view('templates/page-start.html');
+                $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
+                $this->load->view('pages/admin/admin');
+				$data['title'] = 'Error!';
+                $data['message'] = 'Essa tabela não é valida "'.$type.'"';
+                $this->load->view("swals/error",$data);
                 return;
             break;
         }
 
-		$this->load->view("query/consulta.php",$data);
+		$this->load->view("pages/admin/consulta",$data);
+    }
+
+    public function calendar(){
+        if(!isset($_SESSION['codigo'])){
+            $this->user_model->sendSession();
+        }
+        
+		if($_SESSION['access'] == 0){
+            $this->not_access();
+            return;
+        }
+        
+        $data['events'] = ['beserrinha-gostos', 'tamax-horrivel-gay'];
+
+		$this->load->view("pages/admin/default-calendar",$data);
     }
     
     private function not_access(){

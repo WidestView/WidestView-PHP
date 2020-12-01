@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="/resources/style/adminStyle.css"/>
 
         <div class="fab-container">
             <div class="fab fab-icon-holder">
@@ -21,7 +21,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" style="margin-top:15%;">
                 <div class="modal-content">
-                    <div class="modal-header bg-roxo">
+                    <div class="modal-header bg-primary text-white">
                         <h5 class="modal-title" id="exampleModalLabel"> Configurações </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
                         <span aria-hidden="true">&times;</span>
@@ -45,84 +45,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-                        <button type="button" class="btn bg-roxo"> Salvar </button>
+                        <button type="button" class="btn btn-primary text-white"> Salvar </button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <style>
-
-            .fab-container{
-                position: fixed;
-                bottom: 50px;
-                right: 50px;
-                z-index: 999;
-                cursor: pointer;
-            }
-
-            .fab-icon-holder{
-                width: 50px;
-                height: 50px;
-                border-radius: 100%;
-                background: rgba(70, 67, 98, 0.7);;
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2)
-            }
-
-            .fab-icon-holder i{
-                opacity: 0.8;
-            }
-            
-            .fab-icon-holder i{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                color: #FFF;
-            }
-            
-            .fab{
-                width: 60px;
-                height: 60px;
-                background: #464362;
-            }
-
-            .fab-options{
-                list-style-type: none;
-                margin: 0;
-                position: absolute;
-                bottom: 70px;
-                right: 0;
-                opacity: 0;
-                transition: all 0.3s ease;
-                transform: scale(0);
-                transform-origin: 85% bottom;
-            }
-
-            .fab:hover + .fab-options, .fab-options:hover{
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            .fab-options li{
-                display: flex;
-                justify-content: flex-end;
-                padding: 5px;
-            }
-
-            .fab-label{
-                padding: 2px 5px;
-                align-self: center;
-                user-select: none;
-                white-space: nowrap;
-                border-radius: 3px;
-                font-size: 16px;
-                background-color: transparent;
-                color: black;
-                margin-right: 10px;
-            }
-
-        </style>
 
         <div id="admin">
 
@@ -132,7 +59,7 @@
                         <div class="text-center">
                             <h1 class="titulo-preto heading" style="margin-bottom:5rem;"> Administração </h1>
                             <div class="dropdown">
-                                <button class="btn bg-roxo dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-primary text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Selecione uma Operação
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -158,39 +85,6 @@
 
         </div>
 
-        <style>
-
-        @media(max-width:992px){
-            #top-video{
-                height:130vh!important;
-            }
-            #form-bg{
-                padding-top:13vw;
-                margin-top:4vw!important;
-                height:105vh!important;
-            }
-        }
-        @media(width:768px){
-            #top-video{
-                height:110vh!important;
-            }
-            #form-bg{
-                padding-top:13vw;
-                margin-top:4vw!important;
-                height:96vh!important;
-            }
-        }
-        @media(max-width:767px){
-            #top-video{
-                height:180vh!important;
-            }
-            #form-bg{
-                height:165vh!important;
-            }
-        }
-
-        </style>
-        
         <script>
                 
                 const videos = [

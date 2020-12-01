@@ -1,3 +1,5 @@
+@import 'variables';
+
 ::selection {
     background:#464362;
     color: white;                    
@@ -32,21 +34,6 @@ p.tiny {
 
 p.big {
     line-height: 2;
-}
-
-.bg-cinza{
-    background-color: #222222;
-    color: white;
-}
-
-.bg-preto{
-    background-color:#000;
-    color: white;
-}
-
-.bg-roxo{
-    background-color: #464362;
-    color: white;
 }
 
 .titulo-preto{
@@ -246,3 +233,9 @@ p.big {
     }
 }
 
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
