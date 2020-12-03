@@ -27,21 +27,20 @@ class Home extends CI_Controller
 		switch ($swal){
 			case 'login-success':
 				$data['title'] = 'Bem vindo!';
-                $data['message'] = 'Você entrou com sucesso';
-                $this->load->view("swals/success",$data);
+				$data['text'] = 'Você entrou com sucesso';
+				$data['icon'] = 'success';
+                $this->load->view("templates/swal",$data);
 			break;
 			case 'login-error':
 				$data['title'] = 'Credenciais Invalidas!';
-                $data['message'] = 'Login ou Senha incorretos';
-				$this->load->view("swals/error",$data);
+				$data['text'] = 'Login ou Senha incorretos';
+				$data['icon'] = 'error';
+				$this->load->view("templates/swal",$data);
 			break;
 			case 'logout':
-				$data['title'] = 'Tchau Tchau!';
-                $data['message'] = 'Você se deslogou com sucesso';
-                $this->load->view("swals/success",$data);
+				$data['title'] = 'Deslogado com sucesso';
+                $this->load->view("templates/swal",$data);
 			break;	
-			default:
-			break;
 		}
 
 		$this->load->view('templates/page-end.html');

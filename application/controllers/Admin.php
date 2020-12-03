@@ -6,7 +6,8 @@ class Admin extends CI_Controller
         parent::__construct(); 
         $this->load->database();
 		$this->load->library('session');
-		$this->load->model('user_model');
+        $this->load->model('user_model');
+        $this->load->helper('url');
     }
 
     public function selector()
@@ -56,7 +57,7 @@ class Admin extends CI_Controller
         switch ($type){
             case 'funcionario':
                 $data['queryData'] = [
-                    ['Codigo', 'Nome']
+                    ['Codigo', 'Nome','Nome Social','Sexo', 'RG', 'CPF', 'Nascimento', 'Telefone', 'Celular', 'Email', 'Acesso', 'Senha', 'Ativo'],
                 ];
 
                 $sql = "SELECT * FROM funcionario";
@@ -66,14 +67,16 @@ class Admin extends CI_Controller
                 {
                     array_push($data['queryData'],$row);
                 }
+
+                for($i = 0;$i<25;$i++){
+                    array_push($data['queryData'], ['gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay']);
+                }
             break;
             default:
-                $this->load->view('templates/page-start.html');
-                $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
-                $this->load->view('pages/admin/admin');
-				$data['title'] = 'Error!';
-                $data['message'] = 'Essa tabela não é valida "'.$type.'"';
-                $this->load->view("swals/error",$data);
+                $data['title'] = 'Error!';
+                $data['text'] = 'Essa tabela não é valida';
+                $data['icon'] = 'error';
+                $this->load->view("templates/swal",$data);
                 return;
             break;
         }
@@ -97,7 +100,9 @@ class Admin extends CI_Controller
         
         $data['events'] = ['beserrinha-gostos', 'tamax-horrivel-gay'];
 
-		$this->load->view("pages/admin/default-calendar", $data);
+        $this->load->view("pages/admin/default-calendar", $data);
+        
+        $this->load->view('templates/page-end.html');
     }
 
     public function dashboard(){
@@ -114,7 +119,11 @@ class Admin extends CI_Controller
 
         $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
         
-		$this->load->view("pages/admin/dashboard", $data);
+        $data['events'] = ['beserrinha-gostos', 'tamax-horrivel-gay'];
+
+        $this->load->view("pages/admin/dashboard", $data);
+        
+        $this->load->view('templates/page-end.html');
     }
     
     private function not_access(){

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/resources/style/indexStyle.css"/>
 <link rel="stylesheet" href="/resources/node_modules/owl.carousel/dist/assets/owl.carousel.min.css"/>
+<script src="/resources/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 
 <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
@@ -275,7 +276,7 @@
 </script>
 
 <script type="text/javascript" src="/resources/javascript/main.js"></script>
-<script src="/resources/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+
 
 <script>
 
@@ -297,6 +298,43 @@
         })
 
     })
+
+</script>
+
+<script>
+
+    const videos = [
+        '/resources/videos/bgvideo1.mp4',
+        '/resources/videos/bgvideo2.mp4',
+        '/resources/videos/bgvideo3.mp4',
+        '/resources/videos/bgvideo4.mp4'
+    ]
+
+    function getNewVideo(){
+        let lastVideo = localStorage.getItem('lastVideo');
+        let video = '';
+        if(lastVideo === null){
+            video = videos[Math.floor(Math.random() * videos.length)];    
+        }else{
+            const index = videos.indexOf(lastVideo);
+            if (index > -1) {
+                let availableVideos = videos;
+                availableVideos.splice(index,1);
+                video = availableVideos[Math.floor(Math.random() * availableVideos.length)];    
+            }else{
+                console.log('Error on localstorage: ' + lastVideo);
+                video = videos[Math.floor(Math.random() * videos.length)];    
+            }
+        }
+        setVideo(video);
+    }
+
+    function setVideo(video){
+        document.getElementById('top-video').src = video; 
+        localStorage.setItem('lastVideo',video);
+    }
+
+    getNewVideo();
 
 </script>
 

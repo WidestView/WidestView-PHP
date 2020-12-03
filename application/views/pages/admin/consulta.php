@@ -1,12 +1,12 @@
-<div class="col-11">
-    <table class="table table-hover">
+<div class="col-11 table-responsive">
+    <table class="table table-light table-hover">
         <?php
             if (isset($queryData)){ ?>
-                <thead>
+                <thead class="thead-dark">
                     <tr>
                     <th scope="col">#</th>
                     <?php foreach($queryData[0] as $data){ ?>
-                        <th scope="col"><?php echo $data ?></th>
+                        <th class="font-weight-normal" scope="col"><?php echo $data ?></th>
                     <?php } ?>
                     </tr>
                 </thead>

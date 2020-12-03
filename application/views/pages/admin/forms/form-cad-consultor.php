@@ -1,4 +1,4 @@
-<form class="text-justify" style="margin-top:3rem;">
+<form class="text-justify col-5">
 
     <h5 class="text-left mb-3"> Informações do Consultor </h5>
     <div class="form-row">

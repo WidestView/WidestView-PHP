@@ -1,5 +1,5 @@
-<div class="col-5">
-<form class="text-justify">
+<form class="text-justify col-5">
+    
     <h5 class="text-left mb-3"> Informações da Empresa </h5>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -55,4 +55,3 @@
     </div>
 
 </form>
-</div>

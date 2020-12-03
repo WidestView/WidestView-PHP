@@ -1,4 +1,4 @@
-<form class="text-justify" style="margin-top:6rem;">
+<form class="text-justify col-5">
 
     <h5 class="text-left"> Informações do Serviço </h5>
     <div class="form-row">

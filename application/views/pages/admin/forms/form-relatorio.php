@@ -1,4 +1,4 @@
-<form class="text-justify" style="margin-top:6rem;">
+<form class="text-justify">
 
     <h5 class="text-left"> Informações do Relatório </h5>
     <div class="form-row">
