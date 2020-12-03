@@ -1,6 +1,5 @@
 <?php
 
-
 class Admin extends CI_Controller
 {
     public function __construct(){
@@ -10,7 +9,7 @@ class Admin extends CI_Controller
 		$this->load->model('user_model');
     }
 
-    public function index()
+    public function selector()
     {
         if(!isset($_SESSION['codigo'])){
 			$this->user_model->sendSession();
@@ -19,13 +18,13 @@ class Admin extends CI_Controller
 		if($_SESSION['access'] == 0){
             $this->not_access();
             return;
-		}
+        }
         
 		$this->load->view('templates/page-start.html');
 
 		$this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
         
-        $this->load->view('pages/admin/admin');
+        $this->load->view('pages/admin/selector');
 
         $this->load->view('templates/page-end.html');
     }
@@ -84,17 +83,38 @@ class Admin extends CI_Controller
 
     public function calendar(){
         if(!isset($_SESSION['codigo'])){
-            $this->user_model->sendSession();
+			$this->user_model->sendSession();
         }
-        
+
 		if($_SESSION['access'] == 0){
             $this->not_access();
             return;
         }
         
+		$this->load->view('templates/page-start.html');
+
+        $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
+        
         $data['events'] = ['beserrinha-gostos', 'tamax-horrivel-gay'];
 
-		$this->load->view("pages/admin/default-calendar",$data);
+		$this->load->view("pages/admin/default-calendar", $data);
+    }
+
+    public function dashboard(){
+        if(!isset($_SESSION['codigo'])){
+			$this->user_model->sendSession();
+        }
+
+		if($_SESSION['access'] == 0){
+            $this->not_access();
+            return;
+        }
+        
+		$this->load->view('templates/page-start.html');
+
+        $this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
+        
+		$this->load->view("pages/admin/dashboard", $data);
     }
     
     private function not_access(){

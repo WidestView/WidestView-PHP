@@ -23,7 +23,7 @@
                 <a class="nav-link" href="/index.php/home/index#contato">Contato</a>
             </li>
             <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
-                <a class="nav-link" style="color:#8986AC;" href="/index.php/admin">Administração</a>
+                <a class="nav-link" style="color:#8986AC;" href="/index.php/admin/selector">Administração</a>
             </li>
         </ul>
         <p class="mr-0 mr-lg-5 mt-auto mb-auto text-white ml-auto"> Olá, <?php echo $_SESSION['username'] ?>! </p>

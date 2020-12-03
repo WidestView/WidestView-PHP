@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/resources/style/adminStyle.css"/>
 <link rel="stylesheet" href="/resources/node_modules/fullcalendar/main.css"/>
 <script src="/resources/node_modules/fullcalendar/main.js"></script>
 <div id='calendar'></div>

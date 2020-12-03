@@ -63,27 +63,66 @@
                                     Selecione uma Operação
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" id="drop-cadastrar" href="#"> Cadastrar </a>
-                                    <a class="dropdown-item" id="drop-consultar" href="#"> Consultar </a>
-                                    <a class="dropdown-item" id="drop-gerenciar" href="#"> Gerenciar </a>
-                                    <a class="dropdown-item" id="drop-agendar" href="#"> Agendar </a>
-                                    <a class="dropdown-item"id="drop-gerar-rel" href="#"> Gerar Relatório </a>
+                                    <a class="dropdown-item" id="drop-cadastrar" href="javascript:void(0)" onclick="select('cadButtons', 'Selecione opção de cadastro')"> Cadastrar </a>
+                                    <a class="dropdown-item" id="drop-consultar" href="javascript:void(0)" onclick="select('conButtons', 'Selecione opção de consulta')"> Consultar </a>
+                                    <a class="dropdown-item" id="drop-gerenciar" href="/index.php/admin/dashboard"> Gerenciar </a>
+                                    <a class="dropdown-item" id="drop-agendar" href="/index.php/admin/calendar"> Agenda </a>
+                                    <a class="dropdown-item" id="drop-gerar-rel" href="javascript:void(0)" onclick="changeButtonTitle('Relatório');load('form/form-relatorio');"> Gerar Relatório </a>
                                 </div>
                             </div>
-                            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons" style="margin-top:2rem;"
-                                id="option-root">
-                            </div>
+
                             <div class="ml-auto mr-auto" style="width:40vw; margin-top:2rem;">
 
-                            <div id="operation-outlet"></div>
-
+                            <div id="cadButtons" class="btn-group buttonsHide" role="group">
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-cliente')">Cliente</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-consultor')">Consultor</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-demanda')">Demanda</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-servico')">Serviço</button>
                             </div>
+
+                            <div id="conButtons" class="btn-group buttonsHide" role="group">
+                                <button type="button" class="btn btn-primary" onclick="load('tableQuery/funcionario')">Cliente</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-cliente')">Consultor</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-cliente')">Demanda</button>
+                                <button type="button" class="btn btn-primary" onclick="load('form/form-cad-cliente')">Serviço</button>
+                            </div>
+
+                            
                         </div>
+                        <div id="Outlet" class="row justify-content-center"></div>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <script>
+            function select(id, title){
+                document.getElementById('Outlet').innerHTML = '';
+                let buttonsToHide = document.getElementsByClassName('buttonsHide');
+                for(let i = 0; i < buttonsToHide.length; i++){
+                    buttonsToHide[i].style = 'display: none';
+                }
+                document.getElementById(id).style = 'display: block';
+                changeButtonTitle(title);
+            }
+
+            function changeButtonTitle(title){
+                document.getElementById('dropdownMenuButton').innerHTML = title;
+            }
+
+            function load(url){
+                $("#Outlet").load("/index.php/admin/"+url);
+            }
+
+        </script>
+
+        <style>
+            .buttonsHide{
+                display:none;
+            }
+        </style>
+
 
         <script>
                 
@@ -120,12 +159,5 @@
                 
                 getNewVideo();
             </script>
-
-        <script type="text/javascript" src="/resources/javascript/admin-main.js"></script>
-
-        <script src="https://kit.fontawesome.com/87aae4010f.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>

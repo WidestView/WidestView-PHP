@@ -1,3 +1,4 @@
+<div class="col-5">
 <form class="text-justify">
     <h5 class="text-left mb-3"> Informações da Empresa </h5>
     <div class="form-row">
@@ -54,3 +55,4 @@
     </div>
 
 </form>
+</div>
