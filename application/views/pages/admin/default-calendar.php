@@ -24,16 +24,32 @@
 </style>
 
 <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        themeSystem: 'bootstrap'
+   $(document).ready(function(){
+        $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay,listWeek,'
+        },
+        editable: false,
+        navLinks: true,
+        selectHelper: true,
+        events: {
+            url: 'dashboard/Test_Function',
+            type: 'POST',
+            data: {
+            value1: 'aaa',
+            value2: 'bbb'
+            },
+            success: function(data) {
+            console.log(data);
+            },
+            error: function() {
+            alert('Erro ao carregar eventos!');
+            },
+        }
+        });
     });
-    calendar.render();
-    });
-
 </script>
 
 <script>
