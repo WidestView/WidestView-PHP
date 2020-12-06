@@ -16,19 +16,19 @@
             <li class="nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" href="/home/index#equipe">Equipe</a>
             </li>
-            <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
+            <li class="nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" href="/home/index#portfolio">Portfólio</a>
             </li>
-            <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
+            <li class="nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" href="/home/index#contato">Contato</a>
             </li>
-            <li class="nav-item nav-item ml-lg-4 d-flex justify-content-center">
+            <li class="nav-item ml-lg-4 d-flex justify-content-center">
                 <a class="nav-link" style="color:#8986AC;" href="/admin/selector">Administração</a>
             </li>
-            <li class="nav-item nav-item mt-4 mt-lg-0 ml-lg-auto d-flex justify-content-center">
+            <li class="nav-item mt-4 mt-lg-0 ml-lg-auto d-flex justify-content-center">
                 <p class="d-flex mt-auto mb-auto mr-0 mr-lg-3 text-white"> Olá, <?php echo $_SESSION['username'] ?>! </p>
             </li>
-            <li class="nav-item nav-item mt-3 mr-lg-5 mb-2 mb-lg-0 mt-lg-0 d-flex justify-content-center">
+            <li class="nav-item mt-3 mr-lg-5 mb-2 mb-lg-0 mt-lg-0 d-flex justify-content-center">
                 <a href="/home/logout" class="btn btn-danger"> Sair </a>
             </li>
         </ul>

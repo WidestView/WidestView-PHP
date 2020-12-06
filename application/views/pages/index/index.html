@@ -52,7 +52,8 @@
             <div>
                 <div class="testimonial-wrapper" style="margin-top:1rem; color:black">
                     <div class="container">
-                        <div class="testimonial owl-carousel">
+                        
+                        <div class="testimonial owl-carousel owl-theme">
 
                             <div class="singel-testimonial row">
                                 <div class="col-md-12">
@@ -78,7 +79,7 @@
                                                 <img src="/resources/imagens/carvalho.png">
                                             </div>
                                             <div class="col-md-9">
-                                                <h1 class="author-name"> Gabriel Carvalho Simão </h1>
+                                                <h1 class="author-name"> Carvalho Simão </h1>
                                                 <span class="title"> Analista de Infraestrutura </span>
                                             </div>
                                         </div>
@@ -167,7 +168,19 @@
                             </div>
 
                         </div>
+
                     </div>
+
+                    <div class="sliderControl">
+
+                        <div class="owl-dots">
+                            <div class="owl-dot active"><span></span></div>
+                            <div class="owl-dot"><span></span></div>
+                            <div class="owl-dot"><span></span></div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -286,6 +299,9 @@
             items:2,
             loop:true,
             nav:false,
+            autoplay:true,
+            autoplaySpeed: 500,
+            stopOnHover : true,
             dots:true,
             responsive: {
                 0 : {

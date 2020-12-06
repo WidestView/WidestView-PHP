@@ -1,4 +1,4 @@
-<div class="col-11 table-responsive">
+<div class="col-11 table-responsive mb-5">
     <table class="table table-light table-hover">
         <?php
             if (isset($queryData)){ ?>

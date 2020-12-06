@@ -56,7 +56,7 @@
 </div>
 
 <div id="admin">
-            <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:100%; min-height:84.5vh; margin-top:1%;"> 
+            <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:100%; min-height:84.5vh; margin-top:2%;"> 
                 <div class="text-center">
                     <h1 class="titulo-preto heading" style="margin-bottom:5rem;"> Administração </h1>
                     <div class="dropdown">

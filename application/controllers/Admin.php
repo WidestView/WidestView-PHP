@@ -68,8 +68,8 @@ class Admin extends CI_Controller
                     array_push($data['queryData'],$row);
                 }
 
-                for($i = 0;$i<25;$i++){
-                    array_push($data['queryData'], ['gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay','gay']);
+                for($i = 0;$i<10;$i++){
+                    array_push($data['queryData'], ['40028922','Wellington','WellWell','M','12','4','2020-06-20','1','971024838','wellington@gmail.com','1','well123','1']);
                 }
             break;
             default:
