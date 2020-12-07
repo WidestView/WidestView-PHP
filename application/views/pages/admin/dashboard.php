@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 mt-5 mr-0 mr-lg-3 text-center" style="background-color:white; border-radius:10px;">
-                        <h6 class="mt-4"> RELAÇÃO SERVIÇOS X TEMPO </h6>
+                        <h6 class="mt-4"> RELAÇÃO FUNCIONÁRIOS X TEMPO </h6>
                         <canvas id="myChart2" height="160"></canvas>
                     </div>
                     <div class="col-12 col-lg-4 mt-5 ml-0 ml-lg-3 text-center" style="background-color:white; border-radius:10px;">
