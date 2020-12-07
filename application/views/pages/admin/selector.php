@@ -82,8 +82,8 @@
                         </div>
 
                         <div id="conButtons" class="btn-group buttonsHide" role="group">
-                            <button type="button" class="btn btn-primary" onclick="load('tableQuery/funcionario')">Cliente</button>
-                            <button type="button" class="btn btn-primary" onclick="load('tableQuery/consultor')">Consultor</button>
+                            <button type="button" class="btn btn-primary" onclick="load('tableQuery/cliente')">Cliente</button>
+                            <button type="button" class="btn btn-primary" onclick="load('tableQuery/funcionario')">Consultor</button>
                             <button type="button" class="btn btn-primary" onclick="load('tableQuery/demanda')">Demanda</button>
                             <button type="button" class="btn btn-primary" onclick="load('tableQuery/servicos')">Serviço</button>
                         </div>

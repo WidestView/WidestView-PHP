@@ -34,8 +34,8 @@
             <input type="text" class="form-control" id="inputCPF">
         </div>
         <div class="form-group col-md-4 col-sm-9">
-            <label for="inputGen"> Gênero </label>
-            <select id="inputGen" class="form-control">
+            <label for="inputSex"> Sexo </label>
+            <select id="inputSex" class="form-control">
                 <option selected>Prefiro não informar</option>
                 <option>Feminino</option>
                 <option>Masculino</option>
