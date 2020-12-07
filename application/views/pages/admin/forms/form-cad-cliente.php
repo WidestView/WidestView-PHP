@@ -1,4 +1,4 @@
-<div class="text-danger">
+<div class="text-danger" id="validation">
 </div>
 <form class="text-justify">
     <h5 class="text-left mb-3"> Informações da Empresa </h5>
@@ -64,6 +64,53 @@
 
 <script>
     function submit(){
+        $.ajax({
+            type: 'POST',
+            url: '/admin/form_send/form-cad-cliente',
+            data: $('form').serialize(),
+            error: function(xhr) {
+                alert('error');
+            },
+            success: function(resp){
+
+                switch(resp){
+                    case 'success':
+                        Swal.fire({
+                            title : 'Cadastrado!',
+                            text : 'Cliente cadastrado com sucesso!',
+                            icon : 'success',
+                            confirmButtonText : 'Ok',
+                            confirmButtonColor: '#464362'
+                        });
+                        $('#validation').html('');
+                        break;
+                    case 'bad_url':
+                        Swal.fire({
+                            title : 'BAD URL',
+                            text : 'Avisa o suporte do site, deu ruim',
+                            icon : 'error',
+                            confirmButtonText : 'Ok',
+                            confirmButtonColor: '#464362'
+                        });
+                        break;
+                    case 'no-data':
+                        Swal.fire({
+                            title : 'NO DATA',
+                            text : 'Avisa o suporte do site, deu ruim',
+                            icon : 'error',
+                            confirmButtonText : 'Ok',
+                            confirmButtonColor: '#464362'
+                        });
+                        break;
+                    default:
+                        $('#validation').html(resp);
+                    break;
+                }                
+            }
+        });
+
+        /*
+        
         var http = new XMLHttpRequest();
         var url = '/admin/form_send/form-cad-cliente';
         var params = $('form').serialize();
@@ -71,26 +118,32 @@
 
         http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
+
         http.onreadystatechange = function() {//Call a function when the state changes.
             if(http.readyState == 4 && http.status == 200) {
-                alert(http.responseText);
+                let res = http.responseText;
+                if(res == 'success'){
+                    Swal.fire({
+                        title : 'Cadastrado!',
+                        text : 'Cliente cadastrado com sucesso!',
+                        icon : 'success',
+                        confirmButtonText : 'Ok',
+                        confirmButtonColor: '#464362'
+                    });
+                    return;
+                }
+
+                document.getElementById('validation').innerHTML = res;
+
+                if(Array.isArray(res)){
+                    document.getElementById('validation').innerHTML = res;
+                    return;
+                }
+
+                alert(res);
             }
         }
         http.send(params);
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                let res = xhttp.responseText;
-
-                if(res == 'success'){
-                    Swa
-                }
-
-                console.log(xhttp.responseText);
-            }
-        };
-        xhttp.open("POST", "", true);
-        xhttp.send();
+        */
     }
 </script>

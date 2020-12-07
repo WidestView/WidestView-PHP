@@ -103,24 +103,30 @@ class Admin extends CI_Controller
     
             switch($form_name){
                 case 'form-cad-cliente':
-                    $this->form_validation->set_rules('firstValue', 'Batata', 'required');
-                    $this->form_validation->set_rules('secondValue', 'secondValue', 'required|integer');
+                    $this->form_validation->set_rules('nome', 'Nome do Cliente', 'required');
                 break;
                 default:
-                    echo 'FORM URL BAD!';
+                    echo 'bad_url';
                 break;
             }
     
             if ($this->form_validation->run() == TRUE) {
-                echo 'Sucesso!';
+                echo 'success';
 
             } else {
                 $error_associative_array = $this->form_validation->error_array();
-                var_dump($error_associative_array);
+
+                if(count($error_associative_array)>0){
+                    foreach($error_associative_array as $error){
+                        echo $error.'<br>';
+                    }
+                }else{
+                    echo 'success';
+                }
             }
     
         } else {
-            echo 'Não recebi dados!';
+            echo 'no-data';
         }
     }
 
