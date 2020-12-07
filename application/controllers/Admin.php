@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         $this->load->model('user_model');
         $this->load->model('admin_model');
         $this->load->helper('url');
+        $this->load->helper('form');
     }
 
     // FULL PAGE
@@ -27,6 +28,17 @@ class Admin extends CI_Controller
 		$this->load->view($_SESSION['logged_in'] ? 'templates/nav-logado1' : 'templates/nav-deslogado');
         
         $this->load->view('pages/admin/selector');
+
+        $swal = $this->session->flashdata('swal');
+		
+		switch ($swal){
+			case 'form-success':
+				$data['title'] = 'Cadastrado!';
+				$data['text'] = 'Formulário cadastrado com sucesso';
+				$data['icon'] = 'success';
+                $this->load->view("templates/swal",$data);
+			break;
+		}
 
         $this->load->view('templates/page-end.html');
     }
@@ -48,7 +60,7 @@ class Admin extends CI_Controller
         
         $data['events'] = $this->admin_model->calendarEvents();
 
-        $this->load->view("pages/admin/default-calendar", $data);
+        $this->load->view("pages/admin/calendar", $data);
         
         $this->load->view('templates/page-end.html');
     }
@@ -85,9 +97,22 @@ class Admin extends CI_Controller
 		if($_SESSION['access'] == 0){
             $this->not_access();
             return;
-		}
+        }
+        
+        $this->load->helper(array('form', 'url'));
 
-        $this->load->view("pages/admin/forms/$name");
+        $this->load->library('form_validation');
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view("pages/admin/forms/$name");
+        }
+        else
+        {
+            $this->session->set_flashdata('swal', 'form-sucess');
+            redirect(base_url()."home/index");
+        }
+
     }
 
     //PARTIAL PAGE

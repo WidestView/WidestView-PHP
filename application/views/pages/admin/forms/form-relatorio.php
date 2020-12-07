@@ -1,6 +1,9 @@
-<form class="text-justify col-5">
+<?php echo validation_errors(); ?>
+
+<?php echo form_open('/admin/form/relatorio', array('class' => 'text-justify col-5')); ?>
 
     <h5 class="text-left"> Informações do Relatório </h5>
+
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputData"> Data </label>
@@ -19,8 +22,11 @@
             <textarea type="text" class="form-control" rows="3" id="desc"> </textarea>
         </div>
     </div>
+
     <div class="form-row">
-        
+        <div class="form-group col-md-6 ml-auto d-flex justify-content-end">
+            <input class="btn btn-primary" type="submit" value="Enviar" />
+        </div>
     </div>
     
 </form>
