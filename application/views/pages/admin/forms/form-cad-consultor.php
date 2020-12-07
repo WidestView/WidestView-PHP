@@ -1,6 +1,6 @@
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('admin/form/consultor', array('class' => 'text-justify col-5')); ?>
+<?php echo form_open('admin/form/consultor', array('class' => 'text-justify')); ?>
 
     <h5 class="text-left mb-3"> Informações do Consultor </h5>
     <div class="form-row">
@@ -56,14 +56,23 @@
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label for="inputTel"> Telefone </label>
             <input type="text" class="form-control" id="inputTel">
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label for="inputCel"> Celular </label>
             <input type="text" class="form-control" id="inputCel">
         </div>
+        <div class="form-group col-md-4 col-sm-6">
+            <label for="inputRole"> Cargo </label>
+            <select id="inputRole" class="form-control">
+                <option selected> ... </option>
+                
+                <!-- BIND FROM DATABASE -->
+
+            </select>
+        </div>  
     </div>
 
     <div class="form-row">

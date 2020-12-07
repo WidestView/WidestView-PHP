@@ -41,12 +41,6 @@ class Admin_model  extends CI_Model {
                     array_push($result,$row);
                 }
 
-                /* TESTING
-                for($i = 0;$i<10;$i++){
-                    array_push($result, ['40028922','Wellington','WellWell','M','12','4','2020-06-20','1','971024838','wellington@gmail.com','1','well123','1']);
-                }
-                */
-
             break;
             case 'demanda':
                 $result = [

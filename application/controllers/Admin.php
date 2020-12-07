@@ -29,17 +29,6 @@ class Admin extends CI_Controller
         
         $this->load->view('pages/admin/selector');
 
-        $swal = $this->session->flashdata('swal');
-		
-		switch ($swal){
-			case 'form-success':
-				$data['title'] = 'Cadastrado!';
-				$data['text'] = 'Formulário cadastrado com sucesso';
-				$data['icon'] = 'success';
-                $this->load->view("templates/swal",$data);
-			break;
-		}
-
         $this->load->view('templates/page-end.html');
     }
 
@@ -88,7 +77,7 @@ class Admin extends CI_Controller
     }
 
     //PARTIAL PAGE
-    public function form(string $name)
+    public function form(string $form_name)
     {
         if(!isset($_SESSION['codigo'])){
 			$this->user_model->sendSession();
@@ -99,20 +88,40 @@ class Admin extends CI_Controller
             return;
         }
         
-        $this->load->helper(array('form', 'url'));
+        $this->load->view("pages/admin/forms/$form_name");
 
+    }
+
+    //KINDA API
+    public function form_send(string $form_name)
+    {    
         $this->load->library('form_validation');
 
-        if ($this->form_validation->run() == FALSE)
-        {
-            $this->load->view("pages/admin/forms/$name");
-        }
-        else
-        {
-            $this->session->set_flashdata('swal', 'form-sucess');
-            redirect(base_url()."home/index");
-        }
+        if (count($_POST)) {
 
+            $this->form_validation->set_data($_POST);
+    
+            switch($form_name){
+                case 'form-cad-cliente':
+                    $this->form_validation->set_rules('firstValue', 'Batata', 'required');
+                    $this->form_validation->set_rules('secondValue', 'secondValue', 'required|integer');
+                break;
+                default:
+                    echo 'FORM URL BAD!';
+                break;
+            }
+    
+            if ($this->form_validation->run() == TRUE) {
+                echo 'Sucesso!';
+
+            } else {
+                $error_associative_array = $this->form_validation->error_array();
+                var_dump($error_associative_array);
+            }
+    
+        } else {
+            echo 'Não recebi dados!';
+        }
     }
 
     //PARTIAL PAGE

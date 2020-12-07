@@ -92,7 +92,10 @@
                 
             </div>
             <div class="container-fluid">
-                <div id="Outlet" class="row justify-content-center mt-5 mb-4" style="max-width:100vw;"></div>
+                <div class="row justify-content-center mt-5 mb-4" style="max-width:100vw;">
+                    <div class="col-10" id="Outlet">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +103,9 @@
 </div>
 
     <script>
+
+        var local = '';
+
         function call(url, title){
             document.getElementById('Outlet').innerHTML = '';
             let buttonsToHide = document.getElementsByClassName('buttonsHide');

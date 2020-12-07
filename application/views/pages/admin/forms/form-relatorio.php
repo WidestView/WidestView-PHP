@@ -1,6 +1,6 @@
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('/admin/form/relatorio', array('class' => 'text-justify col-5')); ?>
+<?php echo form_open('/admin/form/relatorio', array('class' => 'text-justify')); ?>
 
     <h5 class="text-left"> Informações do Relatório </h5>
 

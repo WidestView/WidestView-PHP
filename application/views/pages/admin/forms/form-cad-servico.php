@@ -1,6 +1,6 @@
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('admin/form/servico', array('class' => 'text-justify col-5')); ?>
+<?php echo form_open('admin/form/servico', array('class' => 'text-justify')); ?>
 
     <h5 class="text-left"> Informações do Serviço </h5>
     <div class="form-row">
