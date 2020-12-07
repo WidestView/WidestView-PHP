@@ -1,7 +1,7 @@
 <div class="col-11 table-responsive mb-5">
     <table class="table table-light table-hover">
         <?php
-            if (isset($queryData)){ ?>
+            if (isset($queryData)){ var_dump($queryData)?>
                 <thead class="thead-dark">
                     <tr>
                     <th scope="col">#</th>

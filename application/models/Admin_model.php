@@ -17,7 +17,7 @@ class Admin_model  extends CI_Model {
                     ['Codigo', 'CNPJ','Nome','rep_Codigo', 'rep_Nome', 'rep_Nome Social', 'rep_CPF', 'rep_Sexo', 'rep_Telefone', 'rep_Celular', 'rep_Email'],
                 ];
 
-                $sql = "SELECT c.CODIGO, c.CNPJ, c.NOME, r.* FROM cliente c INNER JOIN rep_cliente r on c.CODIGO = r.CODIGO";
+                $sql = "SELECT c.CODIGO, c.CNPJ, c.NOME, r.* FROM cliente as c INNER JOIN rep_cliente as r on c.CODIGO = r.CODIGO ";
 
                 $query = $this->db->query($sql);
 
@@ -29,7 +29,7 @@ class Admin_model  extends CI_Model {
             break;
             case 'funcionario':
                 $result = [
-                    ['Codigo', 'Nome','Nome Social','Sexo', 'RG', 'CPF', 'Nascimento', 'Telefone', 'Celular', 'Email', 'Acesso', 'Senha', 'Ativo'],
+                    ['Codigo', 'Nome','Nome Social','Sexo', 'RG', 'CPF', 'Nascimento', 'Telefone', 'Celular', 'Email', 'Acesso', 'Senha', 'Cargo', 'Ativo'],
                 ];
 
                 $sql = "SELECT * FROM funcionario";
@@ -80,17 +80,30 @@ class Admin_model  extends CI_Model {
         return $result;
     }
 
-    public function form($type, $data){
-        switch ($type){
-            case 'funcionario':
-                // CAD
+    public function form($form_name, $data){
+        switch ($form_name){
+            case 'form-cad-cliente':
+                return false;
+
+                //SPLIT INTO REPRESENTANTE AND CLIENTE
+                return $this->db->insert('cliente', $data);  
+            break;
+            case 'form-cad-consultor':
+                return $this->db->insert('consultor', $data);  
+            break;
+            case 'form-cad-demanda':
+                return $this->db->insert('projeto', $data);  
+            break;
+            case 'form-cad-servico':
+                return $this->db->insert('servico', $data);  
+            break;
+            case 'form-cad-relatorio':
+                return $this->db->insert('relatorio', $data);  
             break;
             default:
                 return false;
             break;
         }
-
-        return true;
     }
 
     public function dashboardData(){

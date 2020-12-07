@@ -97,7 +97,7 @@ class Admin extends CI_Controller
     {    
         $this->load->library('form_validation');
 
-        if (count($_POST)) {
+        if (count($_POST)>0) {
 
             $this->form_validation->set_data($_POST);
     
@@ -111,7 +111,11 @@ class Admin extends CI_Controller
             }
     
             if ($this->form_validation->run() == TRUE) {
-                echo 'success';
+                if($this->admin_model->form($form_name, $_POST)){
+                    echo 'success';
+                }else{
+                    echo 'failure';
+                }
 
             } else {
                 $error_associative_array = $this->form_validation->error_array();
@@ -121,7 +125,12 @@ class Admin extends CI_Controller
                         echo $error.'<br>';
                     }
                 }else{
-                    echo 'success';
+                    if($this->admin_model->form($form_name, $_POST)){
+                        echo 'success';
+                    }else{
+                        echo 'failure';
+                    }
+                    
                 }
             }
     
