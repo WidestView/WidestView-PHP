@@ -37,7 +37,7 @@ class Admin_model  extends CI_Model {
             break;
             case 'relatorio':
 
-                $sql = "SELECT * FROM relatorio";
+                $sql = "SELECT * FROM relatorio r INNER JOIN projeto p on p.PRO_CODIGO = r.CODIGO_PROJETO";
 
             break;
             default:
