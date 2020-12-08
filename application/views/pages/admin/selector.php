@@ -68,7 +68,7 @@
                             <a class="dropdown-item" id="drop-consultar" href="javascript:void(0)" onclick="select('conButtons', 'Selecione opção de consulta')"> Consultar </a>
                             <a class="dropdown-item" id="drop-gerenciar" href="/admin/dashboard"> Gerenciar </a>
                             <a class="dropdown-item" id="drop-agendar" href="/admin/calendar"> Agenda </a>
-                            <a class="dropdown-item" id="drop-gerar-rel" href="javascript:void(0)" onclick="call('form/form-relatorio','Relatório');"> Gerar Relatório </a>
+                            <a class="dropdown-item" id="drop-gerar-rel" href="javascript:void(0)" onclick="call('tableQuery/relatorio','form/form-relatorio','Relatório');"> Gerar Relatório </a>
                         </div>
                     </div>
 
@@ -86,6 +86,7 @@
                             <button type="button" class="btn btn-primary" onclick="load('tableQuery/funcionario')">Consultor</button>
                             <button type="button" class="btn btn-primary" onclick="load('tableQuery/demanda')">Demanda</button>
                             <button type="button" class="btn btn-primary" onclick="load('tableQuery/servicos')">Serviço</button>
+                            <button type="button" class="btn btn-primary" onclick="load('tableQuery/relatorio')">Relatório</button>
                         </div>
 
                     </div>
@@ -106,7 +107,7 @@
 
         var local = '';
 
-        function call(url, title){
+        function call(urlBusca, urlForm, title){
             document.getElementById('Outlet').innerHTML = '';
             let buttonsToHide = document.getElementsByClassName('buttonsHide');
 
@@ -117,7 +118,7 @@
             }
 
             document.getElementById('dropdownMenuButton').innerHTML = title;
-            load(url);
+            load(urlForm);
         }
 
 

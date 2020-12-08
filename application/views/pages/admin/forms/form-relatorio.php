@@ -7,19 +7,20 @@
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputData"> Data </label>
-            <input class="form-control" type="date" value="2020-12-31" id="inputData">
+            <input class="form-control" type="date" value="2020-12-31" id="inputData" name="dia">
         </div>
         <div class="form-group col-md-8">
             <label for="inputProj"> Projeto </label>
-            <select id="inputProj" class="form-control">
-                <option selected> ... </option>
-                    
-                <!-- BIND FROM DATABASE -->
+            <select id="inputProj" class="form-control" name="codigo_projeto">
+            <?php 
+                foreach($demanda as $projeto) { ?>
+                    <option value="<?php echo $projeto['pro_codigo'] ?>"> <?php echo $projeto['pro_nome'] ?> </option>
+                <? } ?>
             </select>
         </div>  
         <div class="form-group col-12">
             <label for="desc"> Descrição </label>
-            <textarea type="text" class="form-control" rows="3" id="desc"> </textarea>
+            <textarea type="text" class="form-control" rows="3" id="desc" name="descricao"> </textarea>
         </div>
     </div>
 

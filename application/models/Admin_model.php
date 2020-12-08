@@ -17,7 +17,7 @@ class Admin_model  extends CI_Model {
         switch ($type){
             case 'cliente':
 
-                $sql = "SELECT * FROM cliente as c INNER JOIN rep_cliente as r on c.CLI_CODIGO = r.REP_CODIGO";
+                $sql = "SELECT * FROM cliente as c INNER JOIN rep_cliente as r on c.CLI_CODIGO_REPRESENTANTE = r.REP_CODIGO";
 
             break;
             case 'funcionario':
@@ -27,12 +27,17 @@ class Admin_model  extends CI_Model {
             break;
             case 'demanda':
 
-                $sql = "SELECT * FROM projeto p INNER JOIN cliente c on p.PRO_CODIGO = c.CLI_CODIGO INNER JOIN rep_cliente r ON r.REP_CODIGO = c.CLI_CODIGO";
+                $sql = "SELECT * FROM projeto p INNER JOIN cliente c on p.PRO_CODIGO_CLIENTE = c.CLI_CODIGO INNER JOIN rep_cliente r ON r.REP_CODIGO = c.CLI_CODIGO_REPRESENTANTE";
 
             break;
             case 'servicos':
 
                 $sql = "SELECT * FROM servico";
+
+            break;
+            case 'relatorio':
+
+                $sql = "SELECT * FROM relatorio";
 
             break;
             default:
@@ -82,8 +87,14 @@ class Admin_model  extends CI_Model {
             case 'form-cad-consultor':
                 return $this->db->insert('funcionario', $data);
             break;
+            case 'form-cad-demanda':
+                return $this->db->insert('projeto', array('pro_nome'=>$data['pro_nome'], 'pro_descricao'=>$data['pro_descricao'], 'pro_codigo_cliente'=>$data['pro_codigo_cliente']));
+            break;
             case 'form-cad-servico':
                 return $this->db->insert('servico', $data);
+            break;
+            case 'form-relatorio':
+                return $this->db->insert('relatorio', $data);
             break;
             default:
                 return false;
@@ -98,6 +109,22 @@ class Admin_model  extends CI_Model {
     public function calendarEvents(){
         return true;
     }
+
+    public function getCli(){
+        $sql = "SELECT cli_codigo, cli_nome FROM cliente";
+
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
+
+    }
     
+    public function getDem(){
+        $sql = "SELECT pro_codigo, pro_nome FROM projeto";
+
+        $query = $this->db->query($sql);
+
+        return $query->result_array();
+    }
 }
 ?>

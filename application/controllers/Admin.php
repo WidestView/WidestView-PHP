@@ -88,12 +88,16 @@ class Admin extends CI_Controller
             return;
         }
         switch($form_name){
-            case 'form-demanda':
-                // CARREGAR NOMES CLIENTES E SEUS CODIGOS
+            case 'form-cad-demanda':
+
+                $data['clientes'] = $this->admin_model->getCli();
+
                 $this->load->view("pages/admin/forms/$form_name", $data);
             break;
             case 'form-relatorio':
-                // CARREGAR NOMES PROJETOS E SEUS CODIGOS
+
+                $data['demanda'] = $this->admin_model->getDem();
+
                 $this->load->view("pages/admin/forms/$form_name", $data);
             break;
             default:
@@ -141,8 +145,9 @@ class Admin extends CI_Controller
                     $this->form_validation->set_rules('fun_cargo', 'fun_cargo', 'required');
                 break;
                 case 'form-cad-demanda':
-                    $this->form_validation->set_rules('fun_cargo', 'fun_cargo', 'required');
-                    $this->form_validation->set_rules('fun_cargo', 'fun_cargo', 'required');
+                    $this->form_validation->set_rules('pro_nome', 'pro_nome', 'required');
+                    $this->form_validation->set_rules('pro_descricao', 'pro_descricao', 'required');
+                    $this->form_validation->set_rules('pro_codigo_cliente', 'pro_codigo_cliente', 'required');
                 break;
                 case 'form-cad-servico':
                     $this->form_validation->set_rules('ser_nome', 'ser_nome', 'required');
@@ -160,6 +165,7 @@ class Admin extends CI_Controller
             }
     
             if ($this->form_validation->run() == TRUE) {
+                // echo $this->admin_model->form($form_name, $_POST); //DEBUG
                 if($this->admin_model->form($form_name, $_POST)){
                     echo 'success';
                 }else{
