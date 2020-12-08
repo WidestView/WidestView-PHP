@@ -43,6 +43,7 @@ class Home extends CI_Controller
 			break;	
 		}
 
+		$this->load->view('templates/footer');
 		$this->load->view('templates/page-end.html');
 	}
 
