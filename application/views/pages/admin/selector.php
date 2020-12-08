@@ -68,7 +68,7 @@
                             <a class="dropdown-item" id="drop-consultar" href="javascript:void(0)" onclick="select('conButtons', 'Selecione opção de consulta')"> Consultar </a>
                             <a class="dropdown-item" id="drop-gerenciar" href="/admin/dashboard"> Gerenciar </a>
                             <a class="dropdown-item" id="drop-agendar" href="/admin/calendar"> Agenda </a>
-                            <a class="dropdown-item" id="drop-gerar-rel" href="javascript:void(0)" onclick="call('tableQuery/relatorio','form/form-relatorio','Relatório');"> Gerar Relatório </a>
+                            <a class="dropdown-item" id="drop-gerar-rel" href="javascript:void(0)" onclick="load('form/form-relatorio','Relatório');"> Gerar Relatório </a>
                         </div>
                     </div>
 

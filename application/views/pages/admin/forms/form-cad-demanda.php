@@ -12,9 +12,12 @@
             <label for="inputProj"> Cliente </label>
             <select id="inputProj" name="pro_codigo_cliente" class="form-control" required>
                 <?php 
+                if(count($clientes) > 0){
                 foreach($clientes as $cliente) { ?>
                     <option value="<?php echo $cliente['cli_codigo'] ?>"> <?php echo $cliente['cli_nome'] ?> </option>
-                <? } ?>
+                <?php }} else { ?>
+                    <option value="0"> Nenhum </option>
+                <?php } ?>
             </select>
         </div>  
         <div class="form-group col-md-2">

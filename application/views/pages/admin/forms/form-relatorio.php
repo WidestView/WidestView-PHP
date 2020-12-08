@@ -13,9 +13,12 @@
             <label for="inputProj"> Projeto </label>
             <select id="inputProj" class="form-control" name="codigo_projeto">
             <?php 
+                if(count($demanda) > 0){
                 foreach($demanda as $projeto) { ?>
                     <option value="<?php echo $projeto['pro_codigo'] ?>"> <?php echo $projeto['pro_nome'] ?> </option>
-                <?php } ?>
+                <?php }} else { ?>
+                    <option value="0"> Nenhum </option>
+                <?php } ?>    
             </select>
         </div>  
         <div class="form-group col-12">
