@@ -5,12 +5,12 @@
     <video id="top-video" autoplay loop muted playsinline style="pointer-events: none;"></video>
 </div>
 
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-5">
     <div class="row d-flex justify-content-center">
         <div class="d-none d-lg-flex col-12 mt-4" style="position:absolute;">
             <a href="/admin/selector" class="text-dark" style="font-size:2rem;"><i id="btn-back" class="fa fa-chevron-circle-left text-white"></i></a>
         </div>
-        <div class="col-12 col-lg-2 mt-5 justify-content-center">
+        <div class="col-11 col-lg-2 justify-content-center">
             <div class="d-flex align-items-center justify-content-center bg-white rounded py-4">
                 <i class="fas fa-user-shield text-secondary" style="font-size:6rem;"></i>
             </div>
@@ -31,7 +31,7 @@
                 <h4 id="relatorios"> ~ </h4>
             </div>
         </div>
-        <div class="col-12 col-lg-8 mt-3 text-center ml-0 ml-lg-3">
+        <div class="col-11 rounded my-2 my-lg-0 col-lg-8 text-center bg-white ml-0 ml-lg-3">
             <h6 class="mt-4"> RELAÇÃO PROGRESSO X TEMPO </h6>
             <canvas id="myChart" height="159"></canvas>
         </div>

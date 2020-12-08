@@ -10242,17 +10242,18 @@ h3 {
   margin-top: 20px;
 }
 
+.owl-dots button {
+  margin-left: 9px;
+}
+
 .owl-dots button span {
+  display: block;
   width: 10px;
   line-height: 10px;
   background: #333;
   height: 10px;
   transition: all 0.3s ease;
-  margin-left: 12px;
   border-radius: 100%;
-}
-
-.owl-dots button span {
   background: gray;
 }
 

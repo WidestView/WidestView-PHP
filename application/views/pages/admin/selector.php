@@ -4,57 +4,6 @@
     <video id="top-video" autoplay loop muted playsinline style="pointer-events: none;"></video>
 </div>
 
-<div class="fab-container">
-    <div class="fab fab-icon-holder">
-        <i class="fas fa-sliders-h" data-toggle="modal" data-target="#exampleModal"></i>
-    </div>
-    <ul class="fab-options">
-        <li>
-            <div class="fab-icon-holder">
-            <i class="fas fa-palette" data-toggle="modal" data-target="#exampleModal"></i>
-            </div>
-        </li>
-        <li>
-            <div class="fab-icon-holder">
-                <i class="fas fa-language" data-toggle="modal" data-target="#exampleModal"></i>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="margin-top:15%;">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="exampleModalLabel"> Configurações </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="inputProj"> Esquema de cores </label>
-                    <select id="inputProj" class="form-control">
-                        <option selected> Claro </option>
-                        <option> Escuro </option>
-                    </select>
-                </div>  
-                <div class="form-group">
-                    <label for="inputProj"> Linguagem </label>
-                    <select id="inputProj" class="form-control">
-                        <option selected> Português </option>
-                        <option> Inglês </option>
-                    </select>
-                </div>  
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"> Fechar </button>
-                <button type="button" class="btn btn-primary text-white"> Salvar </button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="admin">
             <div id="form-bg" class="text-center" style="width:100%; background-color: rgba(255, 255, 255, 0.6); z-index:1; height:100%; min-height:84.5vh; margin-top:2%;"> 
                 <div class="text-center">
@@ -94,7 +43,7 @@
             </div>
             <div class="container-fluid">
                 <div class="row justify-content-center mt-5 mb-4" style="max-width:100vw;">
-                    <div class="col-10" id="Outlet">
+                    <div class="col-10 d-flex justify-content-center" id="Outlet">
                     </div>
                 </div>
             </div>

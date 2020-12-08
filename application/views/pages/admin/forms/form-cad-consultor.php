@@ -1,6 +1,6 @@
 <div class="text-danger" id="validation">
 </div>
-<form class="text-justify" method="post">
+<form class="text-justify col-7" method="post">
 
     <h5 class="text-left mb-3"> Informações do Consultor </h5>
     <div class="form-row">

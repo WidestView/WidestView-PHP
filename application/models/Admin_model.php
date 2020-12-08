@@ -17,27 +17,32 @@ class Admin_model  extends CI_Model {
         switch ($type){
             case 'cliente':
 
-                $sql = "SELECT * FROM cliente as c INNER JOIN rep_cliente as r on c.CLI_CODIGO_REPRESENTANTE = r.REP_CODIGO";
+                $sql = "SELECT CLI_CODIGO AS 'Código&nbspdo&nbspCliente', CLI_NOME AS 'Nome&nbspdo&nbspCliente', CLI_CNPJ AS 'CNPJ&nbspdo&nbspCliente',
+                REP_CODIGO AS 'Código&nbspdo&nbspRepresentante', REP_NOME AS 'Nome&nbspdo&nbspRepresentante', REP_NOME_SOCIAL AS 'Nome&nbspSocial&nbspdo&nbspRepresentante', REP_CPF AS 'CPF&nbspdo&nbspRepresentante', REP_SEXO AS 'Sexo&nbspdo&nbspRepresentante',
+                REP_TELEFONE AS 'Telefone&nbspdo&nbspRepresentante', REP_CEL AS 'Celular&nbspdo&nbspRepresentante', REP_EMAIL AS 'Email&nbspdo&nbspRepresentante' FROM cliente as c INNER JOIN rep_cliente as r on c.CLI_CODIGO_REPRESENTANTE = r.REP_CODIGO";
 
             break;
             case 'funcionario':
 
-                $sql = "SELECT * FROM funcionario";
+                $sql = "SELECT FUN_CODIGO AS 'Código', FUN_NOME AS 'Nome', FUN_NOME_SOCIAL AS 'Nome&nbspSocial', FUN_SEXO AS 'Sexo',
+                FUN_RG AS 'RG', FUN_CPF AS 'CPF', FUN_NASCIMENTO AS 'Data_de_Nascimento', FUN_TELEFONE AS 'Telefone', FUN_CEL AS 'Celular',
+                FUN_EMAIL AS 'Email', FUN_NIVELACESSO AS 'Nível&nbspde&nbspAcesso', FUN_SENHA AS 'Senha', FUN_CARGO AS 'Cargo', FUN_ATIVO AS 'Funcionário&nbspAtivo' FROM funcionario";
 
             break;
             case 'demanda':
 
-                $sql = "SELECT * FROM projeto p INNER JOIN cliente c on p.PRO_CODIGO_CLIENTE = c.CLI_CODIGO INNER JOIN rep_cliente r ON r.REP_CODIGO = c.CLI_CODIGO_REPRESENTANTE";
+                $sql = "SELECT PRO_CODIGO AS 'Código', PRO_NOME AS 'Nome', PRO_DESCRICAO AS 'Descrição', PRO_ATIVO AS 'Demanda&nbspAtivo', PRO_CODIGO_CLIENTE AS 'Código&nbspdo&nbspCliente' , PRO_PRAZO AS 'Prazo'
+                FROM projeto p INNER JOIN cliente c on p.PRO_CODIGO_CLIENTE = c.CLI_CODIGO INNER JOIN rep_cliente r ON r.REP_CODIGO = c.CLI_CODIGO_REPRESENTANTE";
 
             break;
             case 'servicos':
 
-                $sql = "SELECT * FROM servico";
+                $sql = "SELECT SER_CODIGO AS 'Código', SER_NOME AS 'Nome', SER_DESCRICAO AS 'Descrição', SER_ATIVO AS 'Serviço&nbspAtivo' FROM servico";
 
             break;
             case 'relatorio':
 
-                $sql = "SELECT * FROM relatorio r INNER JOIN projeto p on p.PRO_CODIGO = r.CODIGO_PROJETO";
+                $sql = "SELECT CODIGO AS 'Código', DIA AS 'Dia', DESCRICAO AS 'Descrição', CODIGO_PROJETO AS 'Código&nbspdo&nbspProjeto' FROM relatorio r INNER JOIN projeto p on p.PRO_CODIGO = r.CODIGO_PROJETO";
 
             break;
             default:
