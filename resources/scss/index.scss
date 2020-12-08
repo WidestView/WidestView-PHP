@@ -76,27 +76,3 @@
     transform: scale(1.05);
 }
 
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.owl-dots button span{
-    width: 10px;
-    line-height: 10px;
-    background: #333;
-    height: 10px;
-    transition: all .3s ease;
-    margin-left: 12px;
-    border-radius: 100%;
-}
-
-.owl-dots button span {
-    background: gray;
-}
-
-.owl-dots button.active span {
-    background: #464362;
-}
-
-
