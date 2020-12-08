@@ -63,4 +63,5 @@
     
 </form>
 
+<script>var url = '/admin/form_send/form-cad-cliente'; </script>
 <script src="/resources/javascript/form.js"></script>

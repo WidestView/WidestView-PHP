@@ -10,7 +10,7 @@ class User_model  extends CI_Model {
     }
     
 	public function login(string $user, string $pass){
-        $sql = "SELECT CODIGO, NOME_SOCIAL, NIVELACESSO FROM funcionario WHERE EMAIL = ? AND SENHA = ?";
+        $sql = "SELECT fun_codigo, fun_nome_social, fun_nivelacesso FROM funcionario WHERE fun_email = ? AND fun_senha = ?";
         $query = $this->db->query($sql, array($user,$pass));
 
         $row = $query->row_array();
@@ -18,9 +18,9 @@ class User_model  extends CI_Model {
         if (isset($row))
         {
             $newdata = array(
-                'username'  => $row['NOME_SOCIAL'],
-                'codigo'    => $row['CODIGO'],
-                'access'     => $row['NIVELACESSO'],
+                'username'  => $row['fun_nome_social'],
+                'codigo'    => $row['fun_codigo'],
+                'access'     => $row['fun_nivelacesso'],
                 'logged_in' => TRUE
             );
             $this->session->set_userdata($newdata);

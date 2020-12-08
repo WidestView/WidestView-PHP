@@ -1,19 +1,19 @@
-<?php echo validation_errors(); ?>
-
-<?php echo form_open('admin/form/servico', array('class' => 'text-justify')); ?>
+<div class="text-danger" id="validation">
+</div>
+<form class="text-justify" method="post">
 
     <h5 class="text-left"> Informações do Serviço </h5>
     <div class="form-row">
         <div class="form-group col-md-12">
             <label for="inputName1"> Nome </label>
-            <input type="text" name="nome" class="form-control" id="inputName1">
+            <input type="text" name="ser_nome" class="form-control" id="inputName1" required>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-12">
             <label for="desc"> Descrição </label>
-            <textarea type="text" name="descricao" class="form-control" rows="3" id="desc"> </textarea>
+            <textarea type="text" name="ser_descricao" class="form-control" rows="3" id="desc" required> </textarea>
         </div>
     </div>
 
@@ -25,4 +25,5 @@
 
 </form>
 
+<script>var url = '/admin/form_send/form-cad-servico'; </script>
 <script src="/resources/javascript/form.js"></script>

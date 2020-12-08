@@ -7,7 +7,7 @@ $("form").submit(function(e) {
 function submit(){
     $.ajax({
             type: 'POST',
-            url: '/admin/form_send/form-cad-cliente',
+            url: url,
             data: $('form').serialize(),
             error: function(xhr) {
                 alert('error');
@@ -18,7 +18,7 @@ function submit(){
                     case 'success':
                         Swal.fire({
                             title : 'Cadastrado!',
-                            text : 'Cliente cadastrado com sucesso!',
+                            text : 'Cadastrado com sucesso!',
                             icon : 'success',
                             confirmButtonText : 'Ok',
                             confirmButtonColor: '#464362'

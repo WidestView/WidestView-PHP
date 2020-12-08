@@ -1,6 +1,6 @@
-<?php echo validation_errors(); ?>
-
-<?php echo form_open('/admin/form/relatorio', array('class' => 'text-justify')); ?>
+<div class="text-danger" id="validation">
+</div>
+<form class="text-justify" method="post">
 
     <h5 class="text-left"> Informações do Relatório </h5>
 
@@ -13,8 +13,8 @@
             <label for="inputProj"> Projeto </label>
             <select id="inputProj" class="form-control">
                 <option selected> ... </option>
-                <option> ... </option>
-                <option> ... </option>
+                    
+                <!-- BIND FROM DATABASE -->
             </select>
         </div>  
         <div class="form-group col-12">
@@ -30,3 +30,6 @@
     </div>
     
 </form>
+
+<script>var url = '/admin/form_send/form-relatorio'; </script>
+<script src="/resources/javascript/form.js"></script>
