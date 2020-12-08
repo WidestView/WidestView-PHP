@@ -107,7 +107,7 @@
 
         var local = '';
 
-        function call(urlBusca, urlForm, title){
+        function call(url, title){
             document.getElementById('Outlet').innerHTML = '';
             let buttonsToHide = document.getElementsByClassName('buttonsHide');
 
@@ -118,7 +118,7 @@
             }
 
             document.getElementById('dropdownMenuButton').innerHTML = title;
-            load(urlForm);
+            load(url);
         }
 
 

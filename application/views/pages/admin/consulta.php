@@ -1,7 +1,8 @@
 <div class="col-11 table-responsive mb-5">
     <table class="table table-light table-hover">
         <?php
-            if (isset($queryData)){ ?>
+            if (isset($queryData)){ 
+                if(count($queryData)>0){?>
                 <thead class="thead-dark">
                     <tr>
                     <?php foreach($queryData[0] as $data){ ?>
@@ -19,6 +20,9 @@
                     <?php } ?>
                 </tbody>
                 <?php
+                }else{
+                    ?> <p> Sem dados nessa tabela </p> <?php 
+                }
             }
         ?>
     </table>

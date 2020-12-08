@@ -15,7 +15,7 @@
             <?php 
                 foreach($demanda as $projeto) { ?>
                     <option value="<?php echo $projeto['pro_codigo'] ?>"> <?php echo $projeto['pro_nome'] ?> </option>
-                <? } ?>
+                <?php } ?>
             </select>
         </div>  
         <div class="form-group col-12">
