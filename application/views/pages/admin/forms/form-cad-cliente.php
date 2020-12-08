@@ -5,11 +5,11 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputName1"> Nome </label>
-            <input type="text" name="nome" class="form-control" id="inputName1" required>
+            <input type="text" name="cli_nome" class="form-control" id="inputName1" required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputNameSoc"> CNPJ </label>
-            <input type="text" name="cnpj" class="form-control" id="inputNameSoc">
+            <input type="text" name="cli_cnpj" class="form-control" id="inputNameSoc">
         </div>
     </div>
 
@@ -37,9 +37,8 @@
         <div class="form-group col-md-4 col-sm-9">
             <label for="inputSex"> Sexo </label>
             <select id="inputSex" name="rep_sexo" class="form-control">
-                <option selected value="null">Prefiro não informar</option>
-                <option value="F">Feminino</option>
-                <option value="M">Masculino</option>
+                <option selected value="F"> Feminino </option>
+                <option value="M"> Masculino </option>
             </select>
         </div>                                     
     </div>
@@ -47,7 +46,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputTel"> Telefone </label>
-            <input type="text" name="rep_tel" class="form-control" id="inputTel">
+            <input type="text" name="rep_telefone" class="form-control" id="inputTel">
         </div>
         <div class="form-group col-md-6">
             <label for="inputCel"> Celular </label>

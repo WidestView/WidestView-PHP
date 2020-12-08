@@ -55,11 +55,29 @@ class Admin_model  extends CI_Model {
     public function form($form_name, $data){
         switch ($form_name){
             case 'form-cad-cliente':
-                return false;
 
-                //SPLIT INTO REPRESENTANTE AND CLIENTE
+                // REPRESENTANTE
 
-                return $this->db->insert('cliente', $data);  
+                $rep_data = array('rep_nome'=>$data['rep_nome'], 'rep_nome_social'=>$data['rep_nome_social'], 'rep_cpf'=>$data['rep_cpf'], 'rep_sexo'=>$data['rep_sexo'], 'rep_telefone'=>$data['rep_telefone'], 'rep_cel'=>$data['rep_cel'], 'rep_email'=>$data['rep_email']);
+
+                $rep = $this->db->insert('rep_cliente', $rep_data);
+
+                $sql = "SELECT MAX(rep_codigo) FROM rep_cliente";
+
+                $query = $this->db->query($sql);
+
+                foreach ($query->result_array() as $row)
+                {
+                    $rep_cod = $row['MAX(rep_codigo)'];
+                }
+
+                //CLIENTE
+
+                $cli_data = array('cli_nome'=>$data['cli_nome'], 'cli_cnpj'=>$data['cli_cnpj'], 'cli_codigo_representante'=>$rep_cod);
+
+                $cli = $this->db->insert('cliente', $cli_data);
+
+                return ($rep && $cli);
             break;
             case 'form-cad-consultor':
                 return $this->db->insert('funcionario', $data);

@@ -37,8 +37,7 @@
         <div class="form-group col-md-4 col-sm-6">
             <label for="inputSex"> Sexo </label>
             <select id="inputSex" name="fun_sexo" class="form-control">
-                <option selected value="null"> Prefiro não informar </option>
-                <option value="F"> Feminino </option>
+                <option selected value="F"> Feminino </option>
                 <option value="M"> Masculino </option>
             </select>
         </div>     

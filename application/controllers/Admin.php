@@ -116,14 +116,14 @@ class Admin extends CI_Controller
     
             switch($form_name){
                 case 'form-cad-cliente':
-                    $this->form_validation->set_rules('cli_nome', 'nome', 'required');
-                    $this->form_validation->set_rules('cli_cnpj', 'cnpj', 'required');
+                    $this->form_validation->set_rules('cli_nome', 'cli_nome', 'required');
+                    $this->form_validation->set_rules('cli_cnpj', 'cli_cnpj', 'required');
                     $this->form_validation->set_rules('rep_nome', 'rep_nome', 'required');
                     $this->form_validation->set_rules('rep_nome_social', 'rep_nome_social', 'required');
                     $this->form_validation->set_rules('rep_email', 'rep_email', 'required');
                     $this->form_validation->set_rules('rep_cpf', 'rep_cpf', 'required');
                     $this->form_validation->set_rules('rep_sexo', 'rep_sexo', 'required');
-                    $this->form_validation->set_rules('rep_tel', 'rep_tel', 'required');
+                    $this->form_validation->set_rules('rep_telefone', 'rep_telefone', 'required');
                     $this->form_validation->set_rules('rep_cel', 'rep_cel', 'required');
                 break;
                 case 'form-cad-consultor':
@@ -165,7 +165,6 @@ class Admin extends CI_Controller
                 }else{
                     echo 'failure';
                 }
-
             } else {
                 $error_associative_array = $this->form_validation->error_array();
 
