@@ -239,6 +239,20 @@ class Admin extends CI_Controller
         echo json_encode($this->admin_model->calendarEvents());
     }
 
+    //Dashboard API
+    public function dashboardAPI(){
+        if(!isset($_SESSION['codigo'])){
+            $this->user_model->sendSession();
+        }
+        
+        if($_SESSION['access'] == 0){
+            $this->not_access();
+            return;
+        }
+        
+        echo json_encode($this->admin_model->dashboardData());
+    }
+
     //PARTIAL PAGE
     private function not_access(){
         $data['heading'] = 'ACESS DENIED';

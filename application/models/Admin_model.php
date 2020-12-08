@@ -103,7 +103,48 @@ class Admin_model  extends CI_Model {
     }
 
     public function dashboardData(){
-        return true;
+        $data = [
+            'clientes' => 0,
+            'consultores' => 0,
+            'demandas' => 0,
+            'relatorios' => 0,
+            'dataRela' => [12, 19, 3, 5, 2, 3, 10, 9, 5, 11, 9, 5],
+            'dataDem' => [5, 12, 5, 12, 5, 1, 2, 6, 3, 10, 9, 2]
+        ];
+
+        $sql = "SELECT COUNT(*) FROM cliente";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+           $data['clientes'] = $row['COUNT(*)'];
+        }
+
+        $sql = "SELECT COUNT(*) FROM funcionario";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+           $data['consultores'] = $row['COUNT(*)'];
+        }
+
+        $sql = "SELECT COUNT(*) FROM projeto";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+           $data['demandas'] = $row['COUNT(*)'];
+        }
+
+        $sql = "SELECT COUNT(*) FROM relatorio";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+           $data['relatorios'] = $row['COUNT(*)'];
+        }
+
+        return $data;
     }
 
     public function calendarEvents(){

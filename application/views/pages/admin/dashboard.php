@@ -10,36 +10,30 @@
         <div class="d-none d-lg-flex col-12 mt-4" style="position:absolute;">
             <a href="/admin/selector" class="text-dark" style="font-size:2rem;"><i id="btn-back" class="fa fa-chevron-circle-left text-white"></i></a>
         </div>
-        <div class="col-11 mt-5">
-            <div style="margin-top:3rem;">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-2 mx-0 mr-lg-5 mb-5 mb-lg-0">
-                        <div class="row mb-4 justify-content-center" style="background-color:white; height:250px;"> 
-                            <i class="fas fa-user-shield text-secondary" style="font-size:6rem; margin-top:5rem;"></i>
-                        </div>
-                        <div class="row mb-4" style="background-color:white; height:80px;">
-                            <h4 class="mt-4 ml-4"> Clientes </h4>
-                            <h4 class="mt-4 mr-5 ml-auto"> 5 </h4>
-                        </div>
-                        <div class="row mb-4" style="background-color:white; height:80px;">
-                            <h4 class="mt-4 ml-4"> Consultores </h4>
-                            <h4 class="mt-4 mr-5 ml-auto"> 7 </h4>
-                        </div>
-                        <div class="row mb-4" style="background-color:white; height:80px;">
-                            <h4 class="mt-4 ml-4"> Demandas </h4>
-                            <h4 class="mt-4 mr-5 ml-auto"> 13 </h4>
-                        </div>
-                        <div class="row" style="background-color:white; height:80px;">
-                            <h4 class="mt-4 ml-4"> Relatórios </h4>
-                            <h4 class="mt-4 mr-5 ml-auto"> 15 </h4>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-8 text-center ml-0 ml-lg-3" style="background-color:white; border-radius:10px;">
-                        <h6 class="mt-4"> RELAÇÃO DEMANDA X TEMPO </h6>
-                        <canvas id="myChart" height="159"></canvas>
-                    </div>
-                </div>
+        <div class="col-12 col-lg-2 mt-5 justify-content-center">
+            <div class="d-flex align-items-center justify-content-center bg-white rounded py-4">
+                <i class="fas fa-user-shield text-secondary" style="font-size:6rem;"></i>
             </div>
+            <div class="d-flex align-items-center justify-content-around bg-white rounded py-3 my-2">
+                <h4 class="pr-1"> Clientes </h4>
+                <h4 id="clientes"> ~ </h4>
+            </div>
+            <div class="d-flex align-items-center justify-content-around bg-white rounded py-3 my-2">
+                <h4 class="pr-1"> Consultores </h4>
+                <h4 id="consultores"> ~ </h4>
+            </div>
+            <div class="d-flex align-items-center justify-content-around bg-white rounded py-3 my-2">
+                <h4 class="pr-1"> Demandas </h4>
+                <h4 id="demandas"> ~ </h4>
+            </div>
+            <div class="d-flex align-items-center justify-content-around bg-white rounded py-3 my-2">
+                <h4 class="pr-1"> Relatorios </h4>
+                <h4 id="relatorios"> ~ </h4>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 mt-3 text-center ml-0 ml-lg-3">
+            <h6 class="mt-4"> RELAÇÃO PROGRESSO X TEMPO </h6>
+            <canvas id="myChart" height="159"></canvas>
         </div>
     </div>
 </div>
@@ -89,46 +83,106 @@
 
 <script>
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho', 'Agosto', 'Setembro', 'Outubro', 'Novmebro', 'Dezembro'],
-        datasets: [{
-            label: 'Relatórios',
-            data: [12, 19, 3, 5, 2, 3, 10, 9, 5, 11, 9, 5],
-            backgroundColor: [
-                '#464362', '#464362', '#464362', '#464362','#464362', '#464362',
-                '#464362', '#464362', '#464362', '#464362', '#464362', '#464362'
-            ],
-            borderColor: [
-                'none'
-            ],
-            borderWidth: 1
-        }, {
-            label: 'Demandas',
-            data: [5, 12, 5, 12, 5, 1, 2, 6, 3, 10, 9, 2],
-            backgroundColor: [
-                '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC','#ABA7CC', '#ABA7CC',
-                '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC'
-            ],
-            borderColor: [
-                'none'
-            ],
-            borderWidth: 1
-        }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
+    let data = {
+        clientes:"~",
+        consultores:"~",
+        demandas:"~",
+        relatorios:"~",
+        dataRela:[],
+        dataDem:[]
     }
-});
+
+    let lastJSON;
+
+    setInterval(reload , 5000);
+
+    reload();
+
+    function reload(){
+        $.ajax({
+            type: 'POST',
+            url: '/admin/dashboardAPI',
+            error: function(xhr) {
+                console.log('Error on reloading data from API');
+            },
+            success: function(resp){
+                console.log(resp);
+                console.log(lastJSON);
+                if(resp!==lastJSON){
+                    lastJSON = resp;
+                    loadResp(JSON.parse(resp));
+                }
+            }});
+    }
+
+    function loadResp(resp){
+
+        if(data.dataRela !== resp.dataRela || data.dataDem !== resp.dataDem){
+            genChart(resp);
+        }
+
+        $('#clientes').html(resp.clientes);
+        $('#consultores').html(resp.consultores);
+        $('#demandas').html(resp.demandas);
+        $('#relatorios').html(resp.relatorios);
+
+        data = resp;
+    }
+</script>
+
+<script>
+var chart = null;
+
+function genChart(set){
+
+    if(chart!==null){
+        chart.destroy();
+    }
+
+    var ctx =  document.getElementById('myChart').getContext('2d');
+
+    chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            datasets: [{
+                label: 'Relatórios',
+                data: set.dataRela,
+                backgroundColor: [
+                    '#464362', '#464362', '#464362', '#464362','#464362', '#464362',
+                    '#464362', '#464362', '#464362', '#464362', '#464362', '#464362'
+                ],
+                borderColor: [
+                    'none'
+                ],
+                borderWidth: 1
+            }, {
+                label: 'Demandas',
+                data: set.dataDem,
+                backgroundColor: [
+                    '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC','#ABA7CC', '#ABA7CC',
+                    '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC', '#ABA7CC'
+                ],
+                borderColor: [
+                    'none'
+                ],
+                borderWidth: 1
+            }
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+}
+
+genChart(data);
 
 </script>
 
