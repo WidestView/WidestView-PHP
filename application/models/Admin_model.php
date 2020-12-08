@@ -107,7 +107,28 @@ class Admin_model  extends CI_Model {
     }
 
     public function calendarEvents(){
-        return true;
+
+        $events = [];
+
+        $sql = "SELECT pro_codigo, pro_nome, pro_descricao, pro_prazo FROM projeto";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+            $arr = array('id'=>$row['pro_codigo'], 'title'=>'Projeto: '.$row['pro_nome'], 'description'=>$row['pro_descricao'], 'start'=>$row['pro_prazo'], 'allDay'=>'true');
+            array_push($events,$arr);
+        }
+
+        $sql = "SELECT codigo, dia, descricao FROM relatorio";
+
+        $query = $this->db->query($sql);
+
+        foreach($query->result_array() as $row){
+            $arr = array('id'=>$row['codigo'], 'title'=>'Relatorio: '.$row['descricao'], 'description'=>$row['descricao'], 'start'=>$row['dia'], 'allDay'=>'true');
+            array_push($events,$arr);
+        }
+
+        return $events;
     }
 
     public function getCli(){

@@ -112,6 +112,15 @@ class Admin extends CI_Controller
     //KINDA API
     public function form_send(string $form_name)
     {    
+        if(!isset($_SESSION['codigo'])){
+            $this->user_model->sendSession();
+        }
+        
+		if($_SESSION['access'] == 0){
+            $this->not_access();
+            return;
+        }
+        
         $this->load->library('form_validation');
 
         if (count($_POST)>0) {
@@ -216,6 +225,20 @@ class Admin extends CI_Controller
 		$this->load->view("pages/admin/consulta",$data);
     }
     
+    //Calendar API
+    public function calendarAPI(){
+        if(!isset($_SESSION['codigo'])){
+            $this->user_model->sendSession();
+        }
+        
+		if($_SESSION['access'] == 0){
+            $this->not_access();
+            return;
+        }
+        
+        echo json_encode($this->admin_model->calendarEvents());
+    }
+
     //PARTIAL PAGE
     private function not_access(){
         $data['heading'] = 'ACESS DENIED';

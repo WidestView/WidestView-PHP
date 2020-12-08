@@ -24,11 +24,18 @@
 </style>
 
 <script>
-
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+            titleFormat:{ year: 'numeric', month: 'long' },
+            themeSystem: 'bootstrap',
+            eventSources: [
+                {
+                    url: '/admin/calendarAPI',
+                    color: '#464362',
+                    textColor: 'white'
+                }
+            ]
         });
         calendar.render();
       });
