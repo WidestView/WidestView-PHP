@@ -103,7 +103,39 @@ class Admin extends CI_Controller
     
             switch($form_name){
                 case 'form-cad-cliente':
-                    $this->form_validation->set_rules('nome', 'Nome do Cliente', 'required');
+                    $this->form_validation->set_rules('nome', 'nome', 'required');
+                    $this->form_validation->set_rules('cnpj', 'cnpj', 'required');
+                    $this->form_validation->set_rules('rep_nome', 'rep_nome', 'required');
+                    $this->form_validation->set_rules('rep_nome_social', 'rep_nome_social', 'required');
+                    $this->form_validation->set_rules('rep_email', 'rep_email', 'required');
+                    $this->form_validation->set_rules('rep_cpf', 'rep_cpf', 'required');
+                    $this->form_validation->set_rules('rep_sexo', 'rep_sexo', 'required');
+                    $this->form_validation->set_rules('rep_tel', 'rep_tel', 'required');
+                    $this->form_validation->set_rules('rep_cel', 'rep_cel', 'required');
+                break;
+                case 'form-cad-consultor':
+                    $this->form_validation->set_rules('nome', 'nome', 'required');
+                    $this->form_validation->set_rules('nome_social', 'nome_social', 'required');
+                    $this->form_validation->set_rules('data_nascimento', 'data_nascimento', 'required');
+                    $this->form_validation->set_rules('email', 'email', 'required');
+                    $this->form_validation->set_rules('senha', 'senha', 'required');
+                    $this->form_validation->set_rules('cpf', 'cpf', 'required');
+                    $this->form_validation->set_rules('sexo', 'sexo', 'required');
+                    $this->form_validation->set_rules('rg', 'rg', 'required');
+                    $this->form_validation->set_rules('nivel_acesso', 'nivel_acesso', 'required');
+                    $this->form_validation->set_rules('telefone', 'telefone', 'required');
+                    $this->form_validation->set_rules('celular', 'celular', 'required');
+                    $this->form_validation->set_rules('cargo', 'cargo', 'required');
+                break;
+                case 'form-cad-demanda':
+                    $this->form_validation->set_rules('nome', 'nome', 'required');
+                    $this->form_validation->set_rules('cliente', 'cliente', 'required');
+                    $this->form_validation->set_rules('prazo', 'prazo', 'required');
+                    $this->form_validation->set_rules('descricao', 'descricao', 'required');
+                break;
+                case 'form-cad-servico':
+                    $this->form_validation->set_rules('nome', 'nome', 'required');
+                    $this->form_validation->set_rules('descricao', 'descricao', 'required');
                 break;
                 default:
                     echo 'bad_url';

@@ -60,6 +60,7 @@
             <input type="submit" class="btn btn-primary" value="Enviar"></button>
         </div>
     </div>
+    
 </form>
 
 <script src="/resources/javascript/form.js"></script>
