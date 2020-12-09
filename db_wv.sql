@@ -60,7 +60,7 @@ create table if not exists PROJETO
     PRO_DESCRICAO       TEXT NOT NULL,
     PRO_ATIVO           BOOLEAN NOT NULL DEFAULT TRUE,
     PRO_CODIGO_CLIENTE  INT NOT NULL,
-    PRO_PRAZO 			DATETIME NOT NULL
+    PRO_PRAZO 			DATE NOT NULL
 );
 
 create table if not exists RELATORIO

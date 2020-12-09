@@ -22,7 +22,7 @@
         </div>  
         <div class="form-group col-md-2">
             <label for="inputData"> Prazo </label>
-            <input class="form-control" name="pro_prazo" type="date" value="2020-12-31" id="inputData" required>
+            <input class="form-control" name="pro_prazo" type="date" value="2020-12-31" id="inputData">
         </div>
     </div>
 

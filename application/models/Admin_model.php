@@ -93,7 +93,7 @@ class Admin_model  extends CI_Model {
                 return $this->db->insert('funcionario', $data);
             break;
             case 'form-cad-demanda':
-                return $this->db->insert('projeto', array('pro_nome'=>$data['pro_nome'], 'pro_descricao'=>$data['pro_descricao'], 'pro_codigo_cliente'=>$data['pro_codigo_cliente']));
+                return $this->db->insert('projeto', $data);
             break;
             case 'form-cad-servico':
                 return $this->db->insert('servico', $data);
@@ -113,8 +113,8 @@ class Admin_model  extends CI_Model {
             'consultores' => 0,
             'demandas' => 0,
             'relatorios' => 0,
-            'dataRela' => [12, 19, 3, 5, 2, 3, 10, 9, 5, 11, 9, 5],
-            'dataDem' => [5, 12, 5, 12, 5, 1, 2, 6, 3, 10, 9, 2]
+            'dataRela' => [],
+            'dataDem' => []
         ];
 
         $sql = "SELECT COUNT(*) FROM cliente";
@@ -149,6 +149,30 @@ class Admin_model  extends CI_Model {
            $data['relatorios'] = $row['COUNT(*)'];
         }
 
+        $year = date("Y");
+
+        // Relatorios
+        for($month = 1; $month<13; $month++){
+            $sql = "SELECT COUNT(codigo) as qtd FROM relatorio WHERE MONTH(dia) = ? AND YEAR(dia) = ?";
+
+            $query = $this->db->query($sql, array($month, $year));
+    
+            foreach($query->result_array() as $row){
+               array_push($data['dataRela'], $row['qtd']);
+            }
+        }
+
+        // PROJETOS
+        for($month = 1; $month<13; $month++){
+            $sql = "SELECT COUNT(PRO_CODIGO) as qtd FROM projeto WHERE MONTH(PRO_PRAZO) = ? AND YEAR(PRO_PRAZO) = ?";
+
+            $query = $this->db->query($sql, array($month, $year));
+    
+            foreach($query->result_array() as $row){
+               array_push($data['dataDem'], $row['qtd']);
+            }
+        }
+    
         return $data;
     }
 
